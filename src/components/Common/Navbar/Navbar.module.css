@@ -1,0 +1,455 @@
+/* =========================================================
+   NAVBAR
+   O A Dewani & Co.
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  background: transparent;
+
+  border-bottom: 1px solid transparent;
+
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    backdrop-filter 0.45s ease;
+}
+
+
+/* =========================================================
+   SCROLLED STATE
+   ========================================================= */
+
+.scrolled {
+  background: rgba(11, 35, 65, 0.78);
+
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   NAVBAR INNER
+   ========================================================= */
+
+.navbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 82px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logoImage {
+  display: block;
+
+  width: auto;
+  height: 46px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+
+/* =========================================================
+   NAV LINK
+   ========================================================= */
+
+.navLink {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  height: 82px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+
+  color: rgba(255, 255, 255, 0.72);
+
+  transition:
+    color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   ACTIVE NAV LINK
+   ========================================================= */
+
+.navLink.active {
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   ACTIVE / HOVER LINE
+   ========================================================= */
+
+.linkLine {
+  position: absolute;
+
+  left: 0;
+  bottom: 23px;
+
+  width: 100%;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: var(--color-secondary);
+
+  transform-origin: left center;
+}
+
+
+/* =========================================================
+   CONSULATION BUTTON
+   ========================================================= */
+
+.consultationBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 0 21px;
+
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-pill);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+
+  background: var(--color-secondary);
+
+  box-shadow:
+    0 5px 20px rgba(201, 164, 92, 0.14);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.consultationBtn:hover {
+  background: var(--color-secondary-light);
+
+  border-color: var(--color-secondary-light);
+
+  box-shadow:
+    0 8px 28px rgba(201, 164, 92, 0.2);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menuButton {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: var(--radius-sm);
+
+  color: var(--color-white);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobileMenu {
+  display: none;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(7, 24, 45, 0.94);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+
+  padding: 14px 20px 24px;
+}
+
+
+/* =========================================================
+   MOBILE NAV LINK
+   ========================================================= */
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  padding-left: 5px;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   ACTIVE MOBILE NAV LINK
+   ========================================================= */
+
+.mobileNavLink.mobileActive {
+  color: var(--color-white);
+}
+
+.mobileNavLink.mobileActive span {
+  position: relative;
+}
+
+.mobileNavLink.mobileActive span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 100%;
+  height: 1px;
+
+  border-radius: 999px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   MOBILE CONSULTATION
+   ========================================================= */
+
+.mobileConsultationBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  padding: 15px 18px;
+
+  border: 1px solid var(--color-secondary);
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+
+  background: var(--color-secondary);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobileConsultationBtn:hover {
+  background: var(--color-secondary-light);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .desktopNav {
+    gap: 24px;
+  }
+
+  .navbarInner {
+    min-height: 76px;
+  }
+
+  .navLink {
+    height: 76px;
+  }
+
+  .linkLine {
+    bottom: 21px;
+  }
+
+  .consultationBtn {
+    padding-inline: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbarInner {
+    min-height: 72px;
+  }
+
+  .logoImage {
+    height: 42px;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .navbarInner {
+    min-height: 68px;
+  }
+
+  .logoImage {
+    height: 38px;
+  }
+
+  .menuButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobileNav {
+    padding-inline: 12px;
+  }
+
+}
