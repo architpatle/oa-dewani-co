@@ -422,7 +422,7 @@ p {
 
   .container,
   .container-wide {
-    width: min(100% - 24px, var(--container-width));
+    width: min(100% - 48px, var(--container-width));
   }
 
   .btn {

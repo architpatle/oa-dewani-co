@@ -1,0 +1,849 @@
+/* =========================================================
+   ABOUT SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.aboutSection {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 0 130px;
+
+  background: var(--color-bg);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 55px;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-primary);
+}
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.aboutGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
+  gap: clamp(60px, 7vw, 110px);
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   VISUAL COLUMN
+   ========================================================= */
+
+.visualColumn {
+  position: relative;
+
+  min-height: 700px;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+   ========================================================= */
+
+.mainImageWrapper {
+  position: absolute;
+
+  top: 15px;
+  left: 35px;
+
+  width: calc(100% - 55px);
+
+  max-width: 525px;
+
+  aspect-ratio: 0.78;
+
+  overflow: hidden;
+
+  z-index: 1;
+  border-radius:
+    0
+    30px
+    30px
+    30px;
+
+  box-shadow:
+    0 24px 55px rgba(11, 35, 65, 0.12);
+}
+
+.mainImage {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================================
+   EXPERIENCE BADGE
+   ========================================================= */
+
+.experienceBadge {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 145px;
+  height: 170px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  color: var(--color-white);
+
+  background: var(--color-primary);
+
+  box-shadow:
+    0 18px 35px rgba(11, 35, 65, 0.18);
+}
+
+
+/* =========================================================
+   BADGE ICON
+   ========================================================= */
+
+.badgeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   EXPERIENCE NUMBER
+   ========================================================= */
+
+.experienceNumber {
+  display: block;
+
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   EXPERIENCE TEXT
+   ========================================================= */
+
+.experienceText {
+  margin-top: 8px;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--fw-medium);
+
+  line-height: 1.35;
+
+  text-align: center;
+
+  letter-spacing: 0.08em;
+
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   GOLD DOTS
+   ========================================================= */
+
+.goldDots {
+  position: absolute;
+
+  left: 10px;
+  bottom: 10px;
+
+  
+  display: grid;
+
+
+  grid-template-columns: repeat(6, 5px);
+
+  gap: 15px;
+
+}
+
+.goldDots span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  opacity: 0.45;
+
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+   ========================================================= */
+
+.secondaryImageWrapper {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 0;
+  bottom: 15px;
+
+  width: 235px;
+
+  aspect-ratio: 1.08;
+
+  overflow: hidden;
+
+  padding: 5px;
+
+  border-radius: 18px;
+
+  background: var(--color-white);
+
+  box-shadow:
+    0 20px 40px rgba(11, 35, 65, 0.18);
+}
+
+.secondaryImage {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 13px;
+}
+
+
+/* =========================================================
+   CONTENT COLUMN
+   ========================================================= */
+
+.contentColumn {
+  position: relative;
+
+  max-width: 650px;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.heading {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    42px,
+    4.1vw,
+    64px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+  color: var(--color-primary);
+}
+
+.heading span {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   ========================================================= */
+
+.headingAccent {
+  width: 76px;
+  height: 2px;
+
+  margin: 27px 0 25px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+  max-width: 610px;
+
+  margin: 0 0 32px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+
+  line-height: 1.75;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   VALUES LIST
+   ========================================================= */
+
+.valuesList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   VALUE CARD
+   ========================================================= */
+
+.valueCard {
+  display: grid;
+
+  grid-template-columns: 70px 1px minmax(0, 1fr);
+
+  align-items: center;
+
+  min-height: 105px;
+
+  padding: 20px 28px;
+
+  border: 1px solid rgba(11, 35, 65, 0.07);
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 8px 28px rgba(11, 35, 65, 0.035);
+
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.valueCard:hover {
+  border-color: rgba(201, 164, 92, 0.3);
+
+  background: var(--color-white);
+
+  box-shadow:
+    0 15px 35px rgba(11, 35, 65, 0.08);
+}
+
+
+/* =========================================================
+   VALUE ICON
+   ========================================================= */
+
+.valueIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background: rgba(11, 35, 65, 0.055);
+}
+
+
+/* =========================================================
+   VALUE DIVIDER
+   ========================================================= */
+
+.valueDivider {
+  width: 1px;
+  height: 54px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   VALUE CONTENT
+   ========================================================= */
+
+.valueContent {
+  padding-left: 26px;
+}
+
+.valueContent h3 {
+  margin: 0 0 7px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+
+  line-height: 1.25;
+
+  color: var(--color-primary);
+}
+
+.valueContent p {
+  max-width: 490px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+
+  line-height: 1.55;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.aboutCta {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 34px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+}
+
+.aboutCta:hover {
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   CTA ARROW
+   ========================================================= */
+
+.ctaArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  color: var(--color-white);
+
+  background: var(--color-primary);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.aboutCta:hover .ctaArrow {
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .aboutGrid {
+    gap: 55px;
+  }
+
+  .visualColumn {
+    min-height: 650px;
+  }
+
+  .mainImageWrapper {
+    width: calc(100% - 40px);
+    left: 25px;
+  }
+
+  .secondaryImageWrapper {
+    width: 205px;
+  }
+
+  .heading {
+    font-size: clamp(
+      40px,
+      4.3vw,
+      56px
+    );
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .aboutSection {
+    padding: 100px 0 110px;
+  }
+
+  .sectionLabel {
+    margin-bottom: 45px;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .visualColumn {
+    min-height: 650px;
+
+    max-width: 650px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .mainImageWrapper {
+    left: 35px;
+
+    width: calc(100% - 70px);
+
+    max-width: none;
+  }
+
+  .secondaryImageWrapper {
+    right: 0;
+
+    width: 220px;
+  }
+
+  .contentColumn {
+    max-width: 720px;
+  }
+
+  .heading {
+    font-size: clamp(
+      42px,
+      6vw,
+      58px
+    );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .aboutSection {
+    padding: 85px 0 90px;
+  }
+
+  .sectionLabel {
+    margin-bottom: 38px;
+  }
+
+  .visualColumn {
+    min-height: 500px;
+  }
+
+  .mainImageWrapper {
+    top: 25px;
+    left: 30px;
+
+    width: calc(100% - 60px);
+
+    border-radius: 0 24px 24px 24px;
+  }
+
+  .experienceBadge {
+    width: 120px;
+    height: 145px;
+
+    border-radius: 15px;
+  }
+
+  .experienceNumber {
+    font-size: 30px;
+  }
+
+  .experienceText {
+    font-size: 9px;
+  }
+
+  .secondaryImageWrapper {
+    width: 175px;
+
+    bottom: 0;
+
+    border-radius: 15px;
+  }
+
+  .secondaryImage {
+    border-radius: 10px;
+  }
+
+  .goldDots {
+    left: 5px;
+    bottom: 0;
+
+    grid-template-columns: repeat(5, 4px);
+
+    gap: 7px;
+  }
+
+  .heading {
+    font-size: clamp(
+      36px,
+      9vw,
+      48px
+    );
+
+    line-height: 1.02;
+  }
+
+  .description {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+  .valueCard {
+    grid-template-columns: 55px 1px minmax(0, 1fr);
+
+    padding: 18px 20px;
+  }
+
+  .valueIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .valueContent {
+    padding-left: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .aboutSection {
+    padding: 70px 0 80px;
+  }
+
+  .sectionLabel {
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+  .visualColumn {
+    min-height: 420px;
+  }
+
+  .mainImageWrapper {
+    top: 20px;
+    left: 22px;
+
+    width: calc(100% - 44px);
+
+    aspect-ratio: 0.82;
+  }
+
+  .experienceBadge {
+    width: 105px;
+    height: 125px;
+
+    padding: 14px;
+
+    border-radius: 13px;
+  }
+
+  .badgeIcon {
+    margin-bottom: 5px;
+  }
+
+  .badgeIcon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .experienceNumber {
+    font-size: 27px;
+  }
+
+  .experienceText {
+    margin-top: 6px;
+
+    font-size: 8px;
+  }
+
+  .secondaryImageWrapper {
+    width: 145px;
+
+    padding: 4px;
+
+    border-radius: 13px;
+  }
+
+  .secondaryImage {
+    border-radius: 9px;
+  }
+
+  .heading {
+    font-size: clamp(
+      32px,
+      10vw,
+      42px
+    );
+  }
+
+  .headingAccent {
+    margin: 22px 0;
+  }
+
+  .description {
+    margin-bottom: 25px;
+  }
+
+  .valuesList {
+    gap: 12px;
+  }
+
+  .valueCard {
+    grid-template-columns: 45px 1px minmax(0, 1fr);
+
+    min-height: 100px;
+
+    padding: 16px;
+  }
+
+  .valueIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .valueIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .valueDivider {
+    height: 50px;
+  }
+
+  .valueContent {
+    padding-left: 15px;
+  }
+
+  .valueContent h3 {
+    font-size: var(--fs-sm);
+  }
+
+  .valueContent p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .aboutCta {
+    margin-top: 28px;
+  }
+
+  .ctaArrow {
+    width: 37px;
+    height: 37px;
+  }
+
+}
