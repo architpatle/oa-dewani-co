@@ -1,0 +1,676 @@
+/* =========================================================
+   SERVICES SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.servicesSection {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 0 130px;
+
+  background: var(--color-bg);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+   ========================================================= */
+
+.decorTop,
+.decorBottom {
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  pointer-events: none;
+
+  opacity: 0.55;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(11, 35, 65, 0.16) 2px,
+    transparent 2.5px
+  );
+
+  background-size: 22px 22px;
+}
+
+.decorTop {
+  top: 35px;
+  right: 45px;
+}
+
+.decorBottom {
+  bottom: 35px;
+  left: 20px;
+
+  opacity: 0.4;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(201, 164, 92, 0.3) 2px,
+    transparent 2.5px
+  );
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.sectionHeader {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 820px;
+
+  margin: 0 auto 58px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   Same as About section
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-primary);
+}
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   Same typography as About section
+   ========================================================= */
+
+.heading {
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    42px,
+    4.1vw,
+    64px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+  color: var(--color-primary);
+}
+
+.heading span {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   Same as About section
+   ========================================================= */
+
+.headingAccent {
+  width: 76px;
+  height: 2px;
+
+  margin: 27px auto 25px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   Same typography as About section
+   ========================================================= */
+
+.description {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.75;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   SERVICES GRID
+   ========================================================= */
+
+.servicesGrid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.serviceCard {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 340px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(11, 35, 65, 0.07);
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 8px 28px rgba(11, 35, 65, 0.035);
+
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.serviceCard:hover {
+  border-color: rgba(201, 164, 92, 0.3);
+
+  background: var(--color-white);
+
+  box-shadow:
+    0 15px 35px rgba(11, 35, 65, 0.08);
+
+  /* transform: translateY(-5px); */
+}
+
+
+/* =========================================================
+   TOP GOLD ACCENT
+   ========================================================= */
+
+.serviceCard::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--color-secondary);
+
+  transition:
+    width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.serviceCard:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================================
+   ICON WRAPPER
+   ========================================================= */
+
+.iconWrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 78px;
+  height: 78px;
+
+  margin-bottom: 27px;
+
+  border: 1px solid rgba(11, 35, 65, 0.14);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   ICON CIRCLE
+   ========================================================= */
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  color: var(--color-secondary);
+
+  background: var(--color-primary);
+
+  box-shadow:
+    0 8px 20px rgba(11, 35, 65, 0.16);
+}
+
+
+/* =========================================================
+   ICON DOT
+   ========================================================= */
+
+.iconDot {
+  position: absolute;
+
+  right: -1px;
+  bottom: 8px;
+
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid var(--color-bg);
+
+  border-radius: 50%;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.cardContent {
+  position: relative;
+
+  z-index: 2;
+
+  padding-right: 25px;
+}
+
+.cardContent h3 {
+  max-width: 235px;
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: var(--fs-xl);
+
+  font-weight: var(--fw-semibold);
+
+  line-height: 1.18;
+
+  letter-spacing: -0.015em;
+
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   CARD GOLD LINE
+   ========================================================= */
+
+.cardLine {
+  display: block;
+
+  width: 34px;
+  height: 1px;
+
+  margin: 16px 0 17px;
+
+  background: var(--color-secondary);
+
+  transition:
+    width 0.35s ease;
+}
+
+.serviceCard:hover .cardLine {
+  width: 52px;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.cardContent p {
+  max-width: 270px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.7;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   VERTICAL DIVIDER
+   ========================================================= */
+
+.cardDivider {
+  position: absolute;
+
+  top: 46px;
+  right: 24px;
+
+  width: 1px;
+  height: 125px;
+
+  background: linear-gradient(
+    to bottom,
+    var(--color-secondary),
+    rgba(201, 164, 92, 0)
+  );
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.cardNumber {
+  position: absolute;
+
+  right: 22px;
+  bottom: 16px;
+
+  font-family: var(--font-heading);
+
+  font-size: 48px;
+
+  font-weight: var(--fw-semibold);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: rgba(11, 35, 65, 0.07);
+
+  user-select: none;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.serviceCard:hover .cardNumber {
+  color: rgba(201, 164, 92, 0.14);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .servicesSection {
+    padding: 100px 0 110px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 50px;
+  }
+
+  .heading {
+    font-size: clamp(
+      42px,
+      6vw,
+      58px
+    );
+  }
+
+  .description {
+    max-width: 650px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .servicesSection {
+    padding: 85px 0 90px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+
+  .sectionLabel {
+    margin-bottom: 38px;
+  }
+
+  .heading {
+    font-size: clamp(
+      36px,
+      9vw,
+      48px
+    );
+
+    line-height: 1.02;
+  }
+
+  .description {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .serviceCard {
+    min-height: 310px;
+
+    padding: 26px;
+  }
+
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .iconCircle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .cardContent {
+    padding-right: 20px;
+  }
+
+  .cardContent h3 {
+    font-size: var(--fs-lg);
+  }
+
+  .cardContent p {
+    max-width: 90%;
+  }
+
+  .decorTop {
+    right: -30px;
+  }
+
+  .decorBottom {
+    left: -35px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .servicesSection {
+    padding: 70px 0 80px;
+  }
+
+  .sectionLabel {
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+  .heading {
+    font-size: clamp(
+      32px,
+      10vw,
+      42px
+    );
+  }
+
+  .headingAccent {
+    margin: 22px auto;
+  }
+
+  .description {
+    margin-bottom: 0;
+  }
+
+  .servicesGrid {
+    gap: 12px;
+  }
+
+  .serviceCard {
+    min-height: 300px;
+
+    padding: 24px;
+  }
+
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 24px;
+  }
+
+  .iconCircle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .cardContent h3 {
+    font-size: var(--fs-base);
+  }
+
+  .cardContent p {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+  .cardDivider {
+    right: 18px;
+  }
+
+  .cardNumber {
+    right: 17px;
+    bottom: 13px;
+
+    font-size: 42px;
+  }
+
+}
