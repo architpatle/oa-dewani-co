@@ -1,0 +1,842 @@
+/* =========================================================
+   BLOGS SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.blogsSection {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 0 130px;
+
+  background: var(--color-bg);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+   ========================================================= */
+
+.decorTop,
+.decorBottom {
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  pointer-events: none;
+
+  opacity: 0.5;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(11, 35, 65, 0.14) 2px,
+    transparent 2.5px
+  );
+
+  background-size: 22px 22px;
+}
+
+
+.decorTop {
+  top: 25px;
+  right: 35px;
+}
+
+
+.decorBottom {
+  bottom: 30px;
+  left: 10px;
+
+  opacity: 0.4;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(201, 164, 92, 0.28) 2px,
+    transparent 2.5px
+  );
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.sectionHeader {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 820px;
+
+  margin: 0 auto 58px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   Same styling as Services / About
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-primary);
+}
+
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.heading {
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    42px,
+    4.1vw,
+    64px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+  color: var(--color-primary);
+}
+
+
+.heading span {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   ========================================================= */
+
+.headingAccent {
+  width: 76px;
+  height: 2px;
+
+  margin: 27px auto 25px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.75;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   BLOG GRID
+   ========================================================= */
+
+.blogGrid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   BLOG CARD
+   ========================================================= */
+
+.blogCard {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid
+    rgba(11, 35, 65, 0.08);
+
+  border-radius: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  box-shadow:
+    0 8px 28px
+    rgba(11, 35, 65, 0.04);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.4s ease,
+    background 0.35s ease;
+}
+
+
+.blogCard:hover {
+  border-color:
+    rgba(201, 164, 92, 0.3);
+
+  background:
+    var(--color-white);
+
+  box-shadow:
+    0 18px 40px
+    rgba(11, 35, 65, 0.09);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 205px;
+
+  overflow: hidden;
+
+  background:
+    rgba(11, 35, 65, 0.06);
+}
+
+
+.blogImage {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.imageWrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(11, 35, 65, 0.08),
+      transparent 45%
+    );
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.category {
+  position: absolute;
+
+  top: 13px;
+  left: 14px;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 24px;
+
+  padding: 0 11px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.5);
+
+  border-radius: 999px;
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.cardBody {
+  display: flex;
+
+  flex: 1;
+
+  flex-direction: column;
+
+  padding: 20px 20px 17px;
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  color: var(--color-text-muted);
+}
+
+
+.metaItem {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+}
+
+
+.metaSeparator {
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.cardTitle {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: var(--fs-lg);
+
+  font-weight: var(--fw-semibold);
+
+  line-height: 1.2;
+
+  letter-spacing: -0.015em;
+
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.cardDescription {
+  display: -webkit-box;
+
+  max-width: 100%;
+
+  margin: 10px 0 0;
+
+  overflow: hidden;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.65;
+
+  color: var(--color-text-muted);
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
+
+.cardFooter {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: auto;
+  padding-top: 16px;
+
+  border-top: 1px solid
+    rgba(11, 35, 65, 0.09);
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.author {
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: var(--fw-medium);
+
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   READ MORE
+   ========================================================= */
+
+.readMore {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.readMore:hover {
+  color: var(--color-secondary);
+}
+
+
+.readMoreArrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   VIEW ALL WRAPPER
+   ========================================================= */
+
+.viewAllWrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+
+/* =========================================================
+   VIEW ALL BUTTON
+   ========================================================= */
+
+.viewAllButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 0 21px;
+
+  border: 1px solid
+    var(--color-primary);
+
+  border-radius: var(--radius-pill);
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-white);
+
+  background:
+    var(--color-primary);
+
+  box-shadow:
+    0 7px 20px
+    rgba(11, 35, 65, 0.1);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.viewAllButton:hover {
+  background:
+    var(--color-primary-light);
+
+  border-color:
+    var(--color-primary-light);
+
+  box-shadow:
+    0 10px 26px
+    rgba(11, 35, 65, 0.15);
+}
+
+
+.viewAllArrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .blogGrid {
+    gap: 20px;
+  }
+
+  .cardBody {
+    padding: 19px 18px 16px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .blogsSection {
+    padding: 100px 0 110px;
+  }
+
+
+  .sectionHeader {
+    margin-bottom: 50px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      42px,
+      6vw,
+      58px
+    );
+  }
+
+
+  .blogGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .imageWrapper {
+    height: 210px;
+  }
+
+
+  .cardTitle {
+    font-size: var(--fs-lg);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .blogsSection {
+    padding: 85px 0 90px;
+  }
+
+
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+
+
+  .sectionLabel {
+    margin-bottom: 38px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      36px,
+      9vw,
+      48px
+    );
+
+    line-height: 1.02;
+  }
+
+
+  .description {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+
+  .blogGrid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .blogCard {
+    border-radius: 16px;
+  }
+
+
+  .imageWrapper {
+    height: 220px;
+  }
+
+
+  .cardBody {
+    padding: 20px 19px 17px;
+  }
+
+
+  .cardTitle {
+    font-size: var(--fs-lg);
+  }
+
+
+  .cardDescription {
+    font-size: var(--fs-sm);
+
+    line-height: 1.65;
+  }
+
+
+  .viewAllWrapper {
+    margin-top: 32px;
+  }
+
+
+  .decorTop {
+    right: -30px;
+  }
+
+
+  .decorBottom {
+    left: -35px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .blogsSection {
+    padding: 70px 0 80px;
+  }
+
+
+  .sectionLabel {
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      32px,
+      10vw,
+      42px
+    );
+  }
+
+
+  .headingAccent {
+    margin: 22px auto;
+  }
+
+
+  .description {
+    margin-bottom: 0;
+  }
+
+
+  .blogGrid {
+    gap: 12px;
+  }
+
+
+  .imageWrapper {
+    height: 200px;
+  }
+
+
+  .cardBody {
+    padding: 18px 17px 15px;
+  }
+
+
+  .meta {
+    font-size: 10px;
+
+    gap: 6px;
+  }
+
+
+  .cardTitle {
+    font-size: var(--fs-base);
+
+    line-height: 1.25;
+  }
+
+
+  .cardDescription {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+
+  .author,
+  .readMore {
+    font-size: 10px;
+  }
+
+
+  .viewAllButton {
+    min-height: 45px;
+
+    padding-inline: 18px;
+
+    font-size: 12px;
+  }
+
+}

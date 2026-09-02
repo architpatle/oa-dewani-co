@@ -5,6 +5,7 @@ import ServicesSection from '../components/Home/ServicesSection/ServicesSection'
 import WhyTrustUs from '../components/Home/WhyTrustUs/WhyTrustUs'
 import IndustriesSection from '../components/Home/IndustriesSection/IndustriesSection'
 import TestimonialsSection from '../components/Home/TestimonialsSection/TestimonialsSection'
+import BlogsSection from '../components/Home/BlogsSection/BlogsSection'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <ServicesSection />
       <WhyTrustUs />
       <IndustriesSection />
+      <BlogsSection />
       <TestimonialsSection />
     </>
   )
