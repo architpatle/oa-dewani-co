@@ -1,0 +1,645 @@
+/* =========================================================
+   FOOTER
+   O A Dewani & Co.
+   ========================================================= */
+
+.footer {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 0 25px;
+
+  background: #0b172b;
+
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.gridPattern {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 38px 38px;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.backgroundGlow {
+  position: absolute;
+
+  right: -160px;
+  bottom: -200px;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 164, 92, 0.08),
+      transparent 68%
+    );
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.footerMain {
+  display: grid;
+
+  grid-template-columns:
+    1.65fr
+    0.75fr
+    1.15fr
+    1.15fr;
+
+  gap: 65px;
+
+  padding-bottom: 68px;
+}
+
+
+/* =========================================================
+   COMPANY COLUMN
+   ========================================================= */
+
+.companyColumn {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logoWrapper {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: start;
+
+  width: 100%;
+
+  max-width: 475px;
+
+  height: 96px;
+
+  /* padding: 15px 30px; */
+
+  border-radius: 15px;
+
+  /* background: var(--color-white); */
+
+  transition:
+    transform 0.3s ease;
+}
+
+.logoWrapper:hover {
+  transform: translateY(-2px);
+}
+
+
+.logo {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  height: 64px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   COMPANY DESCRIPTION
+   ========================================================= */
+
+.companyDescription {
+  max-width: 470px;
+
+  margin: 27px 0 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.socialLinks {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 27px;
+}
+
+
+.socialLink {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.socialLink:hover {
+  color: var(--color-secondary);
+
+  border-color:
+    var(--color-secondary);
+
+  background:
+    rgba(201, 164, 92, 0.08);
+}
+
+
+/* =========================================================
+   LINK COLUMNS
+   ========================================================= */
+
+.linkColumn,
+.contactColumn {
+  padding-top: 3px;
+}
+
+
+/* =========================================================
+   COLUMN TITLE
+   ========================================================= */
+
+.columnTitle {
+  margin: 0 0 23px;
+
+  font-family: var(--font-heading);
+
+  font-size: var(--fs-lg);
+
+  font-weight: var(--fw-semibold);
+
+  line-height: 1.2;
+
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footerLinks {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.footerLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: fit-content;
+
+  gap: 7px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.4;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.footerLink:hover {
+  color: var(--color-white);
+}
+
+
+.linkArrow {
+  opacity: 0;
+
+  color: var(--color-secondary);
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+.footerLink:hover .linkArrow {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contactColumn {
+  min-width: 0;
+}
+
+
+.contactItem {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 17px;
+
+  margin-bottom: 23px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.55;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.contactItem:hover {
+  color: var(--color-white);
+}
+
+
+.contactIcon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 24px;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footerBottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 27px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.copyright,
+.developer {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+
+.copyright span {
+  margin-left: 4px;
+}
+
+
+/* =========================================================
+   DEVELOPER
+   ========================================================= */
+
+.developer a {
+  color: var(--color-secondary);
+
+  font-weight: var(--fw-semibold);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.developer a:hover {
+  color: var(--color-secondary-light);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .footerMain {
+    grid-template-columns:
+      1.5fr
+      0.75fr
+      1fr
+      1fr;
+
+    gap: 45px;
+  }
+
+  .logoWrapper {
+    max-width: 400px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .footer {
+    padding-top: 60px;
+  }
+
+  .footerMain {
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr;
+
+    gap: 45px 35px;
+  }
+
+  .companyColumn {
+    grid-column: span 3;
+  }
+
+  .logoWrapper {
+    max-width: 430px;
+  }
+
+  .companyDescription {
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 55px 0 22px;
+  }
+
+  .footerMain {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px 30px;
+
+    padding-bottom: 50px;
+  }
+
+  .companyColumn {
+    grid-column: span 2;
+  }
+
+  .logoWrapper {
+    height: 82px;
+
+    max-width: 100%;
+
+    /* padding-inline: 25px; */
+  }
+
+  .logo {
+    height: 54px;
+  }
+
+  .companyDescription {
+    margin-top: 22px;
+
+    font-size: var(--fs-sm);
+  }
+
+  .socialLinks {
+    margin-top: 23px;
+  }
+
+  .socialLink {
+    width: 44px;
+    height: 44px;
+  }
+
+  .columnTitle {
+    margin-bottom: 19px;
+
+    font-size: var(--fs-base);
+  }
+
+  .footerLinks {
+    gap: 14px;
+  }
+
+  .footerLink {
+    font-size: var(--fs-sm);
+  }
+
+  .contactItem {
+    font-size: var(--fs-sm);
+
+    gap: 12px;
+
+    margin-bottom: 19px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+  .copyright,
+  .developer {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .footer {
+    padding: 48px 0 20px;
+  }
+
+  .footerMain {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .companyColumn {
+    grid-column: span 1;
+  }
+
+  .logoWrapper {
+    height: 76px;
+
+    border-radius: 12px;
+
+    /* padding-inline: 15px; */
+  }
+
+  .logo {
+    height: 49px;
+  }
+
+  .companyDescription {
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+  .socialLinks {
+    gap: 10px;
+  }
+
+  .socialLink {
+    width: 41px;
+    height: 41px;
+  }
+
+  .columnTitle {
+    margin-bottom: 16px;
+  }
+
+  .footerLinks {
+    gap: 13px;
+  }
+
+  .contactItem {
+    margin-bottom: 17px;
+
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    padding-top: 22px;
+  }
+
+  .copyright,
+  .developer {
+    font-size: 10px;
+  }
+
+}
