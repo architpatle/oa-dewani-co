@@ -6,6 +6,7 @@ import WhyTrustUs from '../components/Home/WhyTrustUs/WhyTrustUs'
 import IndustriesSection from '../components/Home/IndustriesSection/IndustriesSection'
 import TestimonialsSection from '../components/Home/TestimonialsSection/TestimonialsSection'
 import BlogsSection from '../components/Home/BlogsSection/BlogsSection'
+import ContactCTA from '../components/Home/ContactCTA/ContactCTA'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <IndustriesSection />
       <BlogsSection />
       <TestimonialsSection />
+      <ContactCTA />
     </>
   )
 }
