@@ -1,0 +1,864 @@
+/* =========================================================
+   TESTIMONIALS SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.testimonialsSection {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 0 130px;
+
+  background: var(--color-bg);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+   ========================================================= */
+
+.decorTop,
+.decorBottom {
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  pointer-events: none;
+
+  opacity: 0.5;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(11, 35, 65, 0.14) 2px,
+    transparent 2.5px
+  );
+
+  background-size: 22px 22px;
+}
+
+
+.decorTop {
+  top: 25px;
+  right: 35px;
+}
+
+
+.decorBottom {
+  bottom: 30px;
+  left: 10px;
+
+  opacity: 0.4;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(201, 164, 92, 0.28) 2px,
+    transparent 2.5px
+  );
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.sectionHeader {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 820px;
+
+  margin: 0 auto 58px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-primary);
+}
+
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.heading {
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    42px,
+    4.1vw,
+    64px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+  color: var(--color-primary);
+}
+
+
+.heading span {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   ========================================================= */
+
+.headingAccent {
+  width: 76px;
+  height: 2px;
+
+  margin: 27px auto 25px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.75;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   CAROUSEL AREA
+   ========================================================= */
+
+.carouselArea {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   CAROUSEL VIEWPORT
+   ========================================================= */
+
+.carouselViewport {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CAROUSEL TRACK
+   ========================================================= */
+
+.testimonialsTrack {
+  display: flex;
+
+  gap: 22px;
+
+  width: 100%;
+
+  transform: translate3d(0, 0, 0);
+
+  transition:
+    transform 0.75s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   TESTIMONIAL CARD
+   ========================================================= */
+
+.testimonialCard {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 0 0
+    calc(
+      (100% - 44px) / 3
+    );
+
+  min-height: 420px;
+
+  padding: 42px 40px 34px;
+
+  overflow: hidden;
+
+  border: 1px solid
+    rgba(11, 35, 65, 0.07);
+
+  border-radius: 28px;
+
+  /* background:
+    rgba(255, 255, 255, 0.72); */
+
+    background-color: var(--color-bg-soft);
+
+  box-shadow:
+    0 8px 28px
+    rgba(11, 35, 65, 0.035);
+
+  cursor: default;
+
+  transition:
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.testimonialCard:hover {
+  border-color:
+    rgba(201, 164, 92, 0.3);
+
+  background:
+    var(--color-white);
+
+  box-shadow:
+    0 18px 40px
+    rgba(11, 35, 65, 0.08);
+}
+
+
+/* =========================================================
+   QUOTE ICON
+   ========================================================= */
+
+.quoteIcon {
+  display: flex;
+
+  align-items: center;
+
+  height: 58px;
+
+  color: var(--color-secondary);
+
+  opacity: 0.95;
+}
+
+
+.quoteIcon svg {
+  display: block;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.quote {
+  margin: 15px 0 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.72;
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   CARD DIVIDER
+   ========================================================= */
+
+.cardDivider {
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  margin-top: auto;
+
+  margin-bottom: 27px;
+
+  background:
+    rgba(11, 35, 65, 0.1);
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.author {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.authorInitial {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-white);
+
+  background: var(--color-primary);
+
+  box-shadow:
+    0 7px 18px
+    rgba(11, 35, 65, 0.14);
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.testimonialCard:hover .authorInitial {
+  color: var(--color-primary);
+
+  background: var(--color-secondary);
+
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   AUTHOR INFO
+   ========================================================= */
+
+.authorInfo {
+  min-width: 0;
+}
+
+
+.authorInfo h3 {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-semibold);
+
+  line-height: 1.35;
+
+  color: var(--color-primary);
+}
+
+
+.authorInfo p {
+  max-width: 245px;
+
+  margin: 4px 0 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.45;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   CAROUSEL CONTROLS
+   ========================================================= */
+
+.carouselControls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 22px;
+
+  margin-top: 34px;
+}
+
+
+/* =========================================================
+   CAROUSEL BUTTON
+   ========================================================= */
+
+.carouselButton {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 1px solid
+    rgba(11, 35, 65, 0.14);
+
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.carouselButton:hover {
+  color: var(--color-primary);
+
+  background: var(--color-secondary);
+
+  border-color:
+    var(--color-secondary);
+
+  box-shadow:
+    0 7px 20px
+    rgba(201, 164, 92, 0.2);
+}
+
+
+.carouselButton:focus-visible {
+  outline: 2px solid
+    var(--color-secondary);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.pagination {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+
+/* =========================================================
+   PAGINATION DOT
+   ========================================================= */
+
+.paginationDot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11, 35, 65, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.paginationDot:hover {
+  transform: scale(1.2);
+
+  background:
+    rgba(201, 164, 92, 0.65);
+}
+
+
+.paginationDotActive {
+  width: 24px;
+
+  border-radius: 999px;
+
+  background:
+    var(--color-secondary);
+}
+
+
+.paginationDot:focus-visible {
+  outline: 2px solid
+    var(--color-secondary);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .testimonialCard {
+    padding: 38px 32px 32px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .testimonialsSection {
+    padding: 100px 0 110px;
+  }
+
+
+  .sectionHeader {
+    margin-bottom: 50px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      42px,
+      6vw,
+      58px
+    );
+  }
+
+
+  .testimonialCard {
+    flex-basis:
+      calc(
+        (100% - 20px) / 2
+      );
+
+    min-height: 400px;
+  }
+
+
+  .testimonialsTrack {
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .testimonialsSection {
+    padding: 85px 0 90px;
+  }
+
+
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+
+
+  .sectionLabel {
+    margin-bottom: 38px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      36px,
+      9vw,
+      48px
+    );
+
+    line-height: 1.02;
+  }
+
+
+  .description {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+
+  .testimonialsTrack {
+    gap: 16px;
+  }
+
+
+  .testimonialCard {
+    flex-basis: 100%;
+
+    min-height: 380px;
+
+    padding: 34px 28px 28px;
+
+    border-radius: 22px;
+  }
+
+
+  .quoteIcon {
+    height: 52px;
+  }
+
+
+  .quoteIcon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .quote {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+
+  .author {
+    gap: 14px;
+  }
+
+
+  .authorInitial {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .carouselControls {
+    margin-top: 28px;
+
+    gap: 18px;
+  }
+
+
+  .carouselButton {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .decorTop {
+    right: -30px;
+  }
+
+
+  .decorBottom {
+    left: -35px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .testimonialsSection {
+    padding: 70px 0 80px;
+  }
+
+
+  .sectionLabel {
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      32px,
+      10vw,
+      42px
+    );
+  }
+
+
+  .headingAccent {
+    margin: 22px auto;
+  }
+
+
+  .description {
+    margin-bottom: 0;
+  }
+
+
+  .testimonialCard {
+    min-height: 360px;
+
+    padding: 30px 23px 25px;
+
+    border-radius: 18px;
+  }
+
+
+  .quoteIcon {
+    height: 48px;
+  }
+
+
+  .quoteIcon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .quote {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .cardDivider {
+    margin-bottom: 22px;
+  }
+
+
+  .authorInitial {
+    width: 46px;
+    height: 46px;
+
+    font-size: 13px;
+  }
+
+
+  .authorInfo h3 {
+    font-size: 13px;
+  }
+
+
+  .authorInfo p {
+    font-size: 11px;
+  }
+
+
+  .carouselControls {
+    margin-top: 24px;
+
+    gap: 14px;
+  }
+
+
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .pagination {
+    gap: 6px;
+  }
+
+}
