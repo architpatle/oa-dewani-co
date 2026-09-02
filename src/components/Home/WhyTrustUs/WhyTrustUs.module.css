@@ -1,0 +1,816 @@
+/* =========================================================
+   WHY TRUST US SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.whyTrustSection {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 0 130px;
+
+  background: var(--color-bg);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.mainGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.12fr)
+    minmax(0, 0.88fr);
+
+  gap: clamp(60px, 7vw, 105px);
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CONTENT COLUMN
+   ========================================================= */
+
+.contentColumn {
+  position: relative;
+
+  max-width: 720px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   Same visual language as About Section
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-primary);
+}
+
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING
+   Same scale system as About Section
+   ========================================================= */
+
+.heading {
+  max-width: 720px;
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    42px,
+    4.1vw,
+    64px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+  color: var(--color-primary);
+}
+
+
+.heading span {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   ========================================================= */
+
+.headingAccent {
+  width: 76px;
+  height: 2px;
+
+  margin: 27px 0 35px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   TRUST POINTS
+   ========================================================= */
+
+.trustPoints {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 27px;
+}
+
+
+/* =========================================================
+   TRUST POINT
+   ========================================================= */
+
+.trustPoint {
+  display: grid;
+
+  grid-template-columns: 30px minmax(0, 1fr);
+
+  column-gap: 18px;
+
+  align-items: flex-start;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   POINT MARKER
+   ========================================================= */
+
+.pointMarker {
+  display: flex;
+
+  justify-content: center;
+
+  padding-top: 9px;
+}
+
+
+.pointMarker span {
+  display: block;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--color-secondary);
+
+  box-shadow:
+    0 0 0 5px rgba(201, 164, 92, 0.08);
+}
+
+
+/* =========================================================
+   POINT CONTENT
+   ========================================================= */
+
+.pointContent {
+  max-width: 650px;
+}
+
+
+.pointHeading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 7px;
+
+  color: var(--color-primary);
+}
+
+
+.pointHeading svg {
+  display: none;
+
+  color: var(--color-secondary);
+}
+
+
+.pointContent h3 {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1.3;
+
+  color: var(--color-primary);
+}
+
+
+.pointContent p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.7;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   STATISTICS CARD
+   ========================================================= */
+
+.statsCard {
+  position: relative;
+
+  min-height: 680px;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background: var(--color-primary);
+
+  box-shadow:
+    0 25px 60px rgba(11, 35, 65, 0.15);
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+   ========================================================= */
+
+.decorCircleTop {
+  position: absolute;
+
+  top: -105px;
+  right: -105px;
+
+  width: 305px;
+  height: 305px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+
+.decorCircleBottom {
+  position: absolute;
+
+  bottom: -120px;
+  left: -90px;
+
+  width: 225px;
+  height: 225px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================================================
+   STATS CONTENT
+   ========================================================= */
+
+.statsContent {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 680px;
+
+  padding: 58px 54px 48px;
+}
+
+
+/* =========================================================
+   STATS LABEL
+   ========================================================= */
+
+.statsLabel {
+  margin-bottom: 16px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   STATS HEADING
+   ========================================================= */
+
+.statsHeading {
+  max-width: 430px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: clamp(
+    27px,
+    2.2vw,
+    36px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1.25;
+
+  letter-spacing: -0.025em;
+
+  color: var(--color-white);
+}
+
+
+.statsHeading span {
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   METRICS GRID
+   ========================================================= */
+
+.metricsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 48px 35px;
+
+  margin-top: 62px;
+}
+
+
+/* =========================================================
+   METRIC
+   ========================================================= */
+
+.metric {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   METRIC VALUE
+   ========================================================= */
+
+.metricValue {
+  display: block;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    46px,
+    4vw,
+    62px
+  );
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   METRIC LABEL
+   ========================================================= */
+
+.metricLabel {
+  display: block;
+
+  margin-top: 12px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-medium);
+
+  line-height: 1.4;
+
+  letter-spacing: 0.05em;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   TESTIMONIAL DIVIDER
+   ========================================================= */
+
+.testimonialDivider {
+  width: 100%;
+  height: 1px;
+
+  margin-top: auto;
+  margin-bottom: 36px;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   TESTIMONIAL
+   ========================================================= */
+
+.testimonial {
+  max-width: 510px;
+}
+
+
+.testimonial p {
+  margin: 0 0 16px;
+
+  font-family: var(--font-heading);
+
+  font-size: var(--fs-base);
+
+  font-style: italic;
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+.testimonial span {
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .mainGrid {
+    gap: 55px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      40px,
+      4.3vw,
+      56px
+    );
+  }
+
+
+  .statsContent {
+    padding: 50px 42px 42px;
+  }
+
+
+  .statsCard,
+  .statsContent {
+    min-height: 640px;
+  }
+
+
+  .metricsGrid {
+    gap: 42px 25px;
+
+    margin-top: 52px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .whyTrustSection {
+    padding: 100px 0 110px;
+  }
+
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+
+  .contentColumn {
+    max-width: 720px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      42px,
+      6vw,
+      58px
+    );
+  }
+
+
+  .statsCard {
+    max-width: 720px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+
+  .statsContent {
+    min-height: 600px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .whyTrustSection {
+    padding: 85px 0 90px;
+  }
+
+
+  .sectionLabel {
+    margin-bottom: 38px;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      36px,
+      9vw,
+      48px
+    );
+
+    line-height: 1.02;
+  }
+
+
+  .headingAccent {
+    margin: 22px 0 30px;
+  }
+
+
+  .trustPoints {
+    gap: 24px;
+  }
+
+
+  .trustPoint {
+    grid-template-columns: 25px minmax(0, 1fr);
+
+    column-gap: 14px;
+  }
+
+
+  .pointContent p {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+
+  .statsCard {
+    border-radius: 26px;
+  }
+
+
+  .statsContent {
+    min-height: 570px;
+
+    padding: 42px 30px 35px;
+  }
+
+
+  .statsHeading {
+    font-size: 28px;
+  }
+
+
+  .metricsGrid {
+    margin-top: 48px;
+
+    gap: 38px 20px;
+  }
+
+
+  .metricValue {
+    font-size: 45px;
+  }
+
+
+  .metricLabel {
+    font-size: 10px;
+  }
+
+
+  .testimonialDivider {
+    margin-bottom: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .whyTrustSection {
+    padding: 70px 0 80px;
+  }
+
+
+  .sectionLabel {
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .heading {
+    font-size: clamp(
+      32px,
+      10vw,
+      42px
+    );
+  }
+
+
+  .trustPoints {
+    gap: 21px;
+  }
+
+
+  .pointMarker span {
+    width: 8px;
+    height: 8px;
+  }
+
+
+  .pointContent h3 {
+    font-size: var(--fs-sm);
+  }
+
+
+  .pointContent p {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+
+  .statsCard {
+    border-radius: 22px;
+  }
+
+
+  .statsContent {
+    min-height: 540px;
+
+    padding: 35px 22px 28px;
+  }
+
+
+  .statsLabel {
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .statsHeading {
+    font-size: 24px;
+  }
+
+
+  .metricsGrid {
+    margin-top: 42px;
+
+    gap: 35px 15px;
+  }
+
+
+  .metricValue {
+    font-size: 39px;
+  }
+
+
+  .metricLabel {
+    margin-top: 9px;
+
+    font-size: 9px;
+  }
+
+
+  .testimonialDivider {
+    margin-bottom: 23px;
+  }
+
+
+  .testimonial p {
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+
+  .testimonial span {
+    font-size: 11px;
+  }
+
+
+  .decorCircleTop {
+    width: 220px;
+    height: 220px;
+
+    top: -80px;
+    right: -80px;
+  }
+
+
+  .decorCircleBottom {
+    width: 170px;
+    height: 170px;
+
+    bottom: -90px;
+    left: -75px;
+  }
+
+}

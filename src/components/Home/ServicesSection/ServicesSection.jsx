@@ -167,8 +167,8 @@ function ServicesSection() {
       className={styles.servicesSection}
     >
       {/* Decorative elements */}
-      <div className={styles.decorTop} />
-      <div className={styles.decorBottom} />
+      {/* <div className={styles.decorTop} /> */}
+      {/* <div className={styles.decorBottom} /> */}
 
       <div className={`container ${styles.container}`}>
         {/* =================================================
