@@ -1,7 +1,7 @@
 /* =========================================================
    SERVICES SECTION
    O A Dewani & Co.
-   ========================================================= */
+========================================================= */
 
 .servicesSection {
   position: relative;
@@ -16,7 +16,7 @@
 
 /* =========================================================
    CONTAINER
-   ========================================================= */
+========================================================= */
 
 .container {
   position: relative;
@@ -24,51 +24,8 @@
 
 
 /* =========================================================
-   DECORATIVE ELEMENTS
-   ========================================================= */
-
-.decorTop,
-.decorBottom {
-  position: absolute;
-
-  width: 110px;
-  height: 110px;
-
-  pointer-events: none;
-
-  opacity: 0.55;
-
-  background-image: radial-gradient(
-    circle,
-    rgba(11, 35, 65, 0.16) 2px,
-    transparent 2.5px
-  );
-
-  background-size: 22px 22px;
-}
-
-.decorTop {
-  top: 35px;
-  right: 45px;
-}
-
-.decorBottom {
-  bottom: 35px;
-  left: 20px;
-
-  opacity: 0.4;
-
-  background-image: radial-gradient(
-    circle,
-    rgba(201, 164, 92, 0.3) 2px,
-    transparent 2.5px
-  );
-}
-
-
-/* =========================================================
    SECTION HEADER
-   ========================================================= */
+========================================================= */
 
 .sectionHeader {
   position: relative;
@@ -85,13 +42,11 @@
 
 /* =========================================================
    SECTION LABEL
-   Same as About section
-   ========================================================= */
+========================================================= */
 
 .sectionLabel {
   display: flex;
   align-items: center;
-
   justify-content: center;
 
   gap: 12px;
@@ -107,6 +62,7 @@
   color: var(--color-primary);
 }
 
+
 .labelLine {
   display: block;
 
@@ -119,8 +75,7 @@
 
 /* =========================================================
    MAIN HEADING
-   Same typography as About section
-   ========================================================= */
+========================================================= */
 
 .heading {
   max-width: 780px;
@@ -144,6 +99,7 @@
   color: var(--color-primary);
 }
 
+
 .heading span {
   color: var(--color-secondary);
 }
@@ -151,8 +107,7 @@
 
 /* =========================================================
    HEADING ACCENT
-   Same as About section
-   ========================================================= */
+========================================================= */
 
 .headingAccent {
   width: 76px;
@@ -166,8 +121,7 @@
 
 /* =========================================================
    DESCRIPTION
-   Same typography as About section
-   ========================================================= */
+========================================================= */
 
 .description {
   max-width: 720px;
@@ -188,7 +142,7 @@
 
 /* =========================================================
    SERVICES GRID
-   ========================================================= */
+========================================================= */
 
 .servicesGrid {
   position: relative;
@@ -205,7 +159,7 @@
 
 /* =========================================================
    SERVICE CARD
-   ========================================================= */
+========================================================= */
 
 .serviceCard {
   position: relative;
@@ -213,7 +167,7 @@
   display: flex;
   flex-direction: column;
 
-  min-height: 340px;
+  min-height: 365px;
 
   padding: 30px;
 
@@ -235,6 +189,7 @@
     transform 0.35s ease;
 }
 
+
 .serviceCard:hover {
   border-color: rgba(201, 164, 92, 0.3);
 
@@ -242,14 +197,12 @@
 
   box-shadow:
     0 15px 35px rgba(11, 35, 65, 0.08);
-
-  /* transform: translateY(-5px); */
 }
 
 
 /* =========================================================
    TOP GOLD ACCENT
-   ========================================================= */
+========================================================= */
 
 .serviceCard::before {
   content: "";
@@ -268,6 +221,7 @@
     width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+
 .serviceCard:hover::before {
   width: 100%;
 }
@@ -275,7 +229,7 @@
 
 /* =========================================================
    ICON WRAPPER
-   ========================================================= */
+========================================================= */
 
 .iconWrapper {
   position: relative;
@@ -299,7 +253,7 @@
 
 /* =========================================================
    ICON CIRCLE
-   ========================================================= */
+========================================================= */
 
 .iconCircle {
   display: flex;
@@ -321,37 +275,15 @@
 
 
 /* =========================================================
-   ICON DOT
-   ========================================================= */
-
-.iconDot {
-  position: absolute;
-
-  right: -1px;
-  bottom: 8px;
-
-  width: 9px;
-  height: 9px;
-
-  border: 2px solid var(--color-bg);
-
-  border-radius: 50%;
-
-  background: var(--color-secondary);
-}
-
-
-/* =========================================================
    CARD CONTENT
-   ========================================================= */
+========================================================= */
 
 .cardContent {
   position: relative;
 
   z-index: 2;
-
-  padding-right: 25px;
 }
+
 
 .cardContent h3 {
   max-width: 235px;
@@ -374,7 +306,7 @@
 
 /* =========================================================
    CARD GOLD LINE
-   ========================================================= */
+========================================================= */
 
 .cardLine {
   display: block;
@@ -390,6 +322,7 @@
     width 0.35s ease;
 }
 
+
 .serviceCard:hover .cardLine {
   width: 52px;
 }
@@ -397,7 +330,7 @@
 
 /* =========================================================
    CARD DESCRIPTION
-   ========================================================= */
+========================================================= */
 
 .cardContent p {
   max-width: 270px;
@@ -417,67 +350,57 @@
 
 
 /* =========================================================
-   VERTICAL DIVIDER
-   ========================================================= */
+   READ MORE CTA
+========================================================= */
 
-.cardDivider {
-  position: absolute;
+.readMore {
+  display: inline-flex;
+  align-items: center;
 
-  top: 46px;
-  right: 24px;
+  gap: 8px;
 
-  width: 1px;
-  height: 125px;
+  width: fit-content;
 
-  background: linear-gradient(
-    to bottom,
-    var(--color-secondary),
-    rgba(201, 164, 92, 0)
-  );
+  margin-top: auto;
+  padding-top: 26px;
 
-  opacity: 0.8;
-}
+  font-family: var(--font-body);
 
-
-/* =========================================================
-   CARD NUMBER
-   ========================================================= */
-
-.cardNumber {
-  position: absolute;
-
-  right: 22px;
-  bottom: 16px;
-
-  font-family: var(--font-heading);
-
-  font-size: 48px;
-
+  font-size: var(--fs-sm);
   font-weight: var(--fw-semibold);
 
   line-height: 1;
 
-  letter-spacing: -0.04em;
+  text-decoration: none;
 
-  color: rgba(11, 35, 65, 0.07);
-
-  user-select: none;
+  color: var(--color-primary);
 
   transition:
-    color 0.35s ease,
-    transform 0.35s ease;
+    color 0.3s ease;
 }
 
-.serviceCard:hover .cardNumber {
-  color: rgba(201, 164, 92, 0.14);
 
-  transform: translateY(-3px);
+.readMore svg {
+  color: var(--color-secondary);
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.readMore:hover {
+  color: var(--color-secondary);
+}
+
+
+.readMore:hover svg {
+  transform: translateX(4px);
 }
 
 
 /* =========================================================
    LARGE DESKTOP
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1200px) {
 
@@ -487,12 +410,17 @@
     gap: 20px;
   }
 
+
+  .serviceCard {
+    min-height: 350px;
+  }
+
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 992px) {
 
@@ -500,9 +428,11 @@
     padding: 100px 0 110px;
   }
 
+
   .sectionHeader {
     margin-bottom: 50px;
   }
+
 
   .heading {
     font-size: clamp(
@@ -511,6 +441,7 @@
       58px
     );
   }
+
 
   .description {
     max-width: 650px;
@@ -521,7 +452,7 @@
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 768px) {
 
@@ -529,13 +460,16 @@
     padding: 85px 0 90px;
   }
 
+
   .sectionHeader {
     margin-bottom: 40px;
   }
 
+
   .sectionLabel {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
   }
+
 
   .heading {
     font-size: clamp(
@@ -547,11 +481,13 @@
     line-height: 1.02;
   }
 
+
   .description {
     font-size: var(--fs-sm);
 
     line-height: 1.7;
   }
+
 
   .servicesGrid {
     grid-template-columns: 1fr;
@@ -559,40 +495,38 @@
     gap: 16px;
   }
 
+
   .serviceCard {
-    min-height: 310px;
+    min-height: 340px;
 
     padding: 26px;
   }
+
 
   .iconWrapper {
     width: 70px;
     height: 70px;
   }
 
+
   .iconCircle {
     width: 52px;
     height: 52px;
   }
 
-  .cardContent {
-    padding-right: 20px;
-  }
 
   .cardContent h3 {
     font-size: var(--fs-lg);
   }
 
+
   .cardContent p {
     max-width: 90%;
   }
 
-  .decorTop {
-    right: -30px;
-  }
 
-  .decorBottom {
-    left: -35px;
+  .readMore {
+    padding-top: 24px;
   }
 
 }
@@ -600,7 +534,7 @@
 
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 576px) {
 
@@ -608,11 +542,17 @@
     padding: 70px 0 80px;
   }
 
+
   .sectionLabel {
+    gap: 10px;
+
+    margin-bottom: 18px;
+
     font-size: 10px;
 
     letter-spacing: 0.18em;
   }
+
 
   .heading {
     font-size: clamp(
@@ -622,23 +562,28 @@
     );
   }
 
+
   .headingAccent {
     margin: 22px auto;
   }
+
 
   .description {
     margin-bottom: 0;
   }
 
+
   .servicesGrid {
     gap: 12px;
   }
 
+
   .serviceCard {
-    min-height: 300px;
+    min-height: 320px;
 
     padding: 24px;
   }
+
 
   .iconWrapper {
     width: 70px;
@@ -647,30 +592,29 @@
     margin-bottom: 24px;
   }
 
+
   .iconCircle {
     width: 52px;
     height: 52px;
   }
 
+
   .cardContent h3 {
     font-size: var(--fs-base);
   }
 
+
   .cardContent p {
     font-size: 12px;
 
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
-  .cardDivider {
-    right: 18px;
-  }
 
-  .cardNumber {
-    right: 17px;
-    bottom: 13px;
+  .readMore {
+    padding-top: 22px;
 
-    font-size: 42px;
+    font-size: 12px;
   }
 
 }

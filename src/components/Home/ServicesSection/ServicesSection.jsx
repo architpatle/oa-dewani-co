@@ -12,83 +12,92 @@ import {
   Globe2,
   Rocket,
   BriefcaseBusiness,
+  ArrowRight,
 } from "lucide-react";
 
 import styles from "./ServicesSection.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+/* =========================================================
+   SERVICES DATA
+========================================================= */
+
 const services = [
   {
-    number: "01",
     title: "Audit & Assurance",
     description:
       "Independent audit and assurance services that strengthen financial reporting, improve transparency, and build stakeholder confidence.",
     icon: ShieldCheck,
+    link: "/services/audit-assurance",
   },
   {
-    number: "02",
     title: "Secretarial Services",
     description:
       "Reliable compliance and secretarial support to help businesses meet statutory requirements and maintain proper corporate governance.",
     icon: FileCheck2,
+    link: "/services/secretarial-services",
   },
   {
-    number: "03",
     title: "Advisory",
     description:
       "Practical financial and business advisory to help you make informed decisions, manage risks, and pursue sustainable growth.",
     icon: Lightbulb,
+    link: "/services/advisory",
   },
   {
-    number: "04",
     title: "Taxation",
     description:
       "Strategic tax planning, compliance, and advisory solutions that help you stay compliant while optimizing your tax position.",
     icon: ReceiptText,
+    link: "/services/taxation",
   },
   {
-    number: "05",
     title: "NGO Services",
     description:
       "Specialized accounting, audit, taxation, and compliance support tailored to the requirements of NGOs and charitable organizations.",
     icon: HeartHandshake,
+    link: "/services/ngo-services",
   },
   {
-    number: "06",
     title: "NRI Services",
     description:
       "End-to-end tax and financial assistance for NRIs covering compliance, investments, taxation, and India-related financial requirements.",
     icon: Globe2,
+    link: "/services/nri-services",
   },
   {
-    number: "07",
     title: "Business Start Up",
     description:
       "From choosing the right structure to registrations and financial setup, we help turn your business idea into a strong foundation for growth.",
     icon: Rocket,
+    link: "/services/business-start-up",
   },
   {
-    number: "08",
     title: "Outsourcing",
     description:
       "Dependable outsourced accounting and finance support that reduces operational burden and lets you focus on running your business.",
     icon: BriefcaseBusiness,
+    link: "/services/outsourcing",
   },
 ];
 
+
 /* =========================================================
    HEADER ANIMATION
-   ========================================================= */
+========================================================= */
 
 const headerContainerVariants = {
   hidden: {},
+
   visible: {
     transition: {
       staggerChildren: 0.1,
     },
   },
 };
+
 
 const fadeUpVariants = {
   hidden: {
@@ -107,13 +116,19 @@ const fadeUpVariants = {
   },
 };
 
+
+/* =========================================================
+   COMPONENT
+========================================================= */
+
 function ServicesSection() {
   const sectionRef = useRef(null);
   const cardsRef = useRef(null);
 
+
   /* =========================================================
      SERVICES CARD SCROLL ANIMATION
-     ========================================================= */
+  ========================================================= */
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -161,19 +176,17 @@ function ServicesSection() {
     };
   }, []);
 
+
   return (
     <section
       ref={sectionRef}
       className={styles.servicesSection}
     >
-      {/* Decorative elements */}
-      {/* <div className={styles.decorTop} /> */}
-      {/* <div className={styles.decorBottom} /> */}
-
       <div className={`container ${styles.container}`}>
+
         {/* =================================================
             SECTION HEADER
-            ================================================= */}
+        ================================================= */}
 
         <motion.div
           className={styles.sectionHeader}
@@ -185,27 +198,34 @@ function ServicesSection() {
             amount: 0.2,
           }}
         >
+
           {/* Section Label */}
+
           <motion.div
             className={styles.sectionLabel}
             variants={fadeUpVariants}
           >
             <span className={styles.labelLine} />
-            <span>OUR SERVICES</span>
-            <span className={styles.labelLine} />
 
+            <span>CORE SERVICES</span>
+
+            <span className={styles.labelLine} />
           </motion.div>
 
+
           {/* Main Heading */}
+
           <motion.h2
             className={styles.heading}
             variants={fadeUpVariants}
           >
-            Financial expertise for{" "}
-            <span>every stage of your journey.</span>
+            Expertise where it matters.
+            <span> Support when you need it.</span>
           </motion.h2>
 
+
           {/* Heading Accent */}
+
           <motion.div
             className={styles.headingAccent}
             initial={{
@@ -226,20 +246,24 @@ function ServicesSection() {
             }}
           />
 
+
           {/* Description */}
+
           <motion.p
             className={styles.description}
             variants={fadeUpVariants}
           >
-            From compliance and taxation to strategic advisory, we provide
-            comprehensive financial solutions designed to help your business
-            operate with confidence and grow with clarity.
+            Explore our specialist service areas, each designed to bring
+            greater clarity, stronger compliance, and practical support to
+            the financial and business decisions you make every day.
           </motion.p>
+
         </motion.div>
+
 
         {/* =================================================
             SERVICES GRID
-            ================================================= */}
+        ================================================= */}
 
         <div
           ref={cardsRef}
@@ -250,12 +274,13 @@ function ServicesSection() {
 
             return (
               <article
-                key={service.number}
+                key={service.title}
                 className={styles.serviceCard}
               >
+
                 {/* =================================================
                     ICON
-                    ================================================= */}
+                ================================================= */}
 
                 <motion.div
                   className={styles.iconWrapper}
@@ -275,33 +300,55 @@ function ServicesSection() {
                       strokeWidth={1.6}
                     />
                   </div>
-
-                  {/* <span className={styles.iconDot} /> */}
                 </motion.div>
+
 
                 {/* =================================================
                     CONTENT
-                    ================================================= */}
+                ================================================= */}
 
                 <div className={styles.cardContent}>
-                  <h3>{service.title}</h3>
+
+                  <h3>
+                    {service.title}
+                  </h3>
 
                   <span className={styles.cardLine} />
 
-                  <p>{service.description}</p>
+                  <p>
+                    {service.description}
+                  </p>
+
                 </div>
 
-                {/* Vertical gold accent */}
-                <span className={styles.cardDivider} />
 
-                {/* Background number */}
-                <span className={styles.cardNumber}>
-                  {service.number}
-                </span>
+                {/* =================================================
+                    READ MORE CTA
+                ================================================= */}
+
+                <motion.a
+                  href={service.link}
+                  className={styles.readMore}
+                  whileHover={{
+                    x: 4,
+                  }}
+                  transition={{
+                    duration: 0.25,
+                  }}
+                >
+                  <span>Read More</span>
+
+                  <ArrowRight
+                    size={17}
+                    strokeWidth={1.8}
+                  />
+                </motion.a>
+
               </article>
             );
           })}
         </div>
+
       </div>
     </section>
   );

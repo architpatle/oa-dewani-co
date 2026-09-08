@@ -118,7 +118,7 @@ const ServicesHero = () => {
                         <span className={styles.labelLine} />
 
                         <span>
-                            OUR SERVICES
+                        SERVICES WE PROVIDE
                         </span>
 
                         <span className={styles.labelLine} />
@@ -131,9 +131,9 @@ const ServicesHero = () => {
                         className={styles.heroTitle}
                         variants={fadeUp}
                     >
-                        Financial expertise for
+                        Financial services, 
                         <span>
-                            every stage of your journey
+                            crafted around your business
                         </span>
                     </motion.h1>
 
