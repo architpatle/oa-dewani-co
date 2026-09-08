@@ -1,0 +1,411 @@
+/* =========================================================
+   SERVICE SINGLE HERO
+   O A Dewani & Co.
+   ========================================================= */
+
+.serviceHero {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    /* min-height: 580px; */
+
+    overflow: hidden;
+
+    padding: 120px 0 0px;
+
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.backgroundGlow {
+    position: absolute;
+
+    top: -300px;
+    left: 50%;
+
+    width: 900px;
+    height: 720px;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 164, 92, 0.11) 0%,
+            rgba(201, 164, 92, 0.045) 40%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.gridOverlay {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+   ========================================================= */
+
+.decorativeDotsLeft,
+.decorativeDotsRight {
+    position: absolute;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 5px);
+
+    gap: 13px;
+
+    opacity: 0.26;
+
+    pointer-events: none;
+}
+
+
+.decorativeDotsLeft {
+    top: 175px;
+    left: 7%;
+}
+
+
+.decorativeDotsRight {
+    right: 7%;
+    bottom: 110px;
+}
+
+
+.decorativeDotsLeft span,
+.decorativeDotsRight span {
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.heroContent {
+    position: relative;
+
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SERVICE META
+   ========================================================= */
+
+.serviceMeta {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--fw-semibold);
+
+    letter-spacing: 0.22em;
+
+    color: var(--color-secondary);
+}
+
+
+.metaLine {
+    display: block;
+
+    width: 38px;
+    height: 1px;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.heroTitle {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        42px,
+        4.8vw,
+        68px
+    );
+
+    font-weight: var(--fw-bold);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   ========================================================= */
+
+.headingAccent {
+    width: 70px;
+    height: 2px;
+
+    margin: 28px auto 0;
+
+    background: var(--color-secondary);
+
+    transform-origin: center;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.heroDescription {
+    max-width: 690px;
+
+    margin: 26px auto 0;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-base);
+
+    font-weight: var(--fw-regular);
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================================
+   BOTTOM DECORATIVE LINE
+   ========================================================= */
+
+.bottomLine {
+    width: min(700px, 70%);
+
+    height: 1px;
+
+    margin: 68px auto 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+        );
+
+    transform-origin: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .serviceHero {
+        /* min-height: 530px; */
+
+        padding: 115px 0 0px;
+    }
+
+
+    .heroTitle {
+        font-size: clamp(
+            42px,
+            6vw,
+            58px
+        );
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .serviceHero {
+        min-height: auto;
+
+        padding: 110px 0 0px;
+    }
+
+
+    .heroTitle {
+        font-size: clamp(
+            36px,
+            9vw,
+            48px
+        );
+
+        line-height: 1.05;
+    }
+
+
+    .heroDescription {
+        max-width: 600px;
+
+        margin-top: 22px;
+
+        font-size: var(--fs-sm);
+
+        line-height: 1.7;
+    }
+
+
+    .bottomLine {
+        margin-top: 55px;
+    }
+
+
+    .decorativeDotsLeft {
+        left: -10px;
+    }
+
+
+    .decorativeDotsRight {
+        right: -10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .serviceHero {
+        padding: 110px 0 0px;
+    }
+
+
+    .serviceMeta {
+        gap: 9px;
+
+        margin-bottom: 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.18em;
+    }
+
+
+    .metaLine {
+        width: 28px;
+    }
+
+
+    .heroTitle {
+        font-size: clamp(
+            32px,
+            10vw,
+            42px
+        );
+
+        letter-spacing: -0.035em;
+    }
+
+
+    .headingAccent {
+        width: 60px;
+
+        margin-top: 24px;
+    }
+
+
+    .heroDescription {
+        margin-top: 20px;
+
+        font-size: 13px;
+    }
+
+
+    .bottomLine {
+        width: 80%;
+
+        margin-top: 50px;
+    }
+
+
+    .decorativeDotsLeft,
+    .decorativeDotsRight {
+        opacity: 0.18;
+    }
+
+}

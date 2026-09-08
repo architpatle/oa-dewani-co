@@ -1,19 +1,13 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import {
-  ShieldCheck,
-  FileCheck2,
-  Lightbulb,
-  ReceiptText,
-  HeartHandshake,
-  Globe2,
-  Rocket,
-  BriefcaseBusiness,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+import servicesData from "../../../data/servicesData";
 
 import styles from "./ServicesSection.module.css";
 
@@ -21,72 +15,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 /* =========================================================
-   SERVICES DATA
-========================================================= */
-
-const services = [
-  {
-    title: "Audit & Assurance",
-    description:
-      "Independent audit and assurance services that strengthen financial reporting, improve transparency, and build stakeholder confidence.",
-    icon: ShieldCheck,
-    link: "/services/audit-assurance",
-  },
-  {
-    title: "Secretarial Services",
-    description:
-      "Reliable compliance and secretarial support to help businesses meet statutory requirements and maintain proper corporate governance.",
-    icon: FileCheck2,
-    link: "/services/secretarial-services",
-  },
-  {
-    title: "Advisory",
-    description:
-      "Practical financial and business advisory to help you make informed decisions, manage risks, and pursue sustainable growth.",
-    icon: Lightbulb,
-    link: "/services/advisory",
-  },
-  {
-    title: "Taxation",
-    description:
-      "Strategic tax planning, compliance, and advisory solutions that help you stay compliant while optimizing your tax position.",
-    icon: ReceiptText,
-    link: "/services/taxation",
-  },
-  {
-    title: "NGO Services",
-    description:
-      "Specialized accounting, audit, taxation, and compliance support tailored to the requirements of NGOs and charitable organizations.",
-    icon: HeartHandshake,
-    link: "/services/ngo-services",
-  },
-  {
-    title: "NRI Services",
-    description:
-      "End-to-end tax and financial assistance for NRIs covering compliance, investments, taxation, and India-related financial requirements.",
-    icon: Globe2,
-    link: "/services/nri-services",
-  },
-  {
-    title: "Business Start Up",
-    description:
-      "From choosing the right structure to registrations and financial setup, we help turn your business idea into a strong foundation for growth.",
-    icon: Rocket,
-    link: "/services/business-start-up",
-  },
-  {
-    title: "Outsourcing",
-    description:
-      "Dependable outsourced accounting and finance support that reduces operational burden and lets you focus on running your business.",
-    icon: BriefcaseBusiness,
-    link: "/services/outsourcing",
-  },
-];
-
-
-/* =========================================================
    HEADER ANIMATION
-========================================================= */
+   ========================================================= */
 
 const headerContainerVariants = {
   hidden: {},
@@ -119,7 +49,7 @@ const fadeUpVariants = {
 
 /* =========================================================
    COMPONENT
-========================================================= */
+   ========================================================= */
 
 function ServicesSection() {
   const sectionRef = useRef(null);
@@ -128,7 +58,7 @@ function ServicesSection() {
 
   /* =========================================================
      SERVICES CARD SCROLL ANIMATION
-  ========================================================= */
+     ========================================================= */
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -219,8 +149,10 @@ function ServicesSection() {
             className={styles.heading}
             variants={fadeUpVariants}
           >
-            Expertise where it matters.
-            <span> Support when you need it.</span>
+            Financial expertise for{" "}
+            <span>
+              every stage of your journey.
+            </span>
           </motion.h2>
 
 
@@ -253,9 +185,9 @@ function ServicesSection() {
             className={styles.description}
             variants={fadeUpVariants}
           >
-            Explore our specialist service areas, each designed to bring
-            greater clarity, stronger compliance, and practical support to
-            the financial and business decisions you make every day.
+            Explore our specialised services designed to support
+            businesses through compliance, financial management,
+            strategic decisions, and sustainable growth.
           </motion.p>
 
         </motion.div>
@@ -269,12 +201,12 @@ function ServicesSection() {
           ref={cardsRef}
           className={styles.servicesGrid}
         >
-          {services.map((service) => {
+          {servicesData.map((service) => {
             const Icon = service.icon;
 
             return (
               <article
-                key={service.title}
+                key={service.slug}
                 className={styles.serviceCard}
               >
 
@@ -316,33 +248,29 @@ function ServicesSection() {
                   <span className={styles.cardLine} />
 
                   <p>
-                    {service.description}
+                    {service.shortDescription}
                   </p>
+
+
+                  {/* Read More */}
+
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className={styles.readMore}
+                  >
+                    <span>
+                      Read More
+                    </span>
+
+                    <ArrowRight size={17} />
+                  </Link>
 
                 </div>
 
 
-                {/* =================================================
-                    READ MORE CTA
-                ================================================= */}
+                {/* Vertical Gold Accent */}
 
-                <motion.a
-                  href={service.link}
-                  className={styles.readMore}
-                  whileHover={{
-                    x: 4,
-                  }}
-                  transition={{
-                    duration: 0.25,
-                  }}
-                >
-                  <span>Read More</span>
-
-                  <ArrowRight
-                    size={17}
-                    strokeWidth={1.8}
-                  />
-                </motion.a>
+                <span className={styles.cardDivider} />
 
               </article>
             );
@@ -353,5 +281,6 @@ function ServicesSection() {
     </section>
   );
 }
+
 
 export default ServicesSection;
