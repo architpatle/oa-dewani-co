@@ -1,0 +1,562 @@
+/* =========================================================
+   ABOUT HERO
+   O A Dewani & Co.
+   ========================================================= */
+
+.servicesHero {
+    position: relative;
+
+    /* min-height: 650px; */
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 120px 0 0px;
+
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.backgroundGlow {
+    position: absolute;
+
+    top: -280px;
+    left: 50%;
+
+    width: 850px;
+    height: 700px;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            rgba(201, 164, 92, 0.1) 0%,
+            rgba(201, 164, 92, 0.045) 38%,
+            transparent 70%);
+}
+
+
+/* =========================================================
+   SUBTLE BACKGROUND GRID
+   ========================================================= */
+
+.servicesHero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px);
+
+    background-size: 80px 80px;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+   ========================================================= */
+
+.decorativeDotsLeft,
+.decorativeDotsRight {
+    position: absolute;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 5px);
+
+    gap: 13px;
+
+    opacity: 0.28;
+
+    pointer-events: none;
+}
+
+
+.decorativeDotsLeft {
+    top: 185px;
+    left: 7%;
+}
+
+
+.decorativeDotsRight {
+    right: 7%;
+    bottom: 115px;
+}
+
+
+.decorativeDotsLeft span,
+.decorativeDotsRight span {
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.breadcrumb {
+    position: absolute;
+
+    top: -55px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.55);
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.breadcrumb a:hover {
+    color: var(--color-secondary);
+}
+
+
+.breadcrumb svg {
+    color: var(--color-secondary);
+
+    stroke-width: 1.7;
+}
+
+
+.breadcrumb span {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-weight: var(--fw-medium);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.heroContent {
+    position: relative;
+
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   Same styling language as Home sections
+   ========================================================= */
+
+.sectionLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--fw-semibold);
+
+    letter-spacing: 0.22em;
+
+    color: var(--color-secondary);
+}
+
+
+.labelLine {
+    display: block;
+
+    width: 38px;
+    height: 1px;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HERO TITLE
+   Matches Home Hero scale
+   ========================================================= */
+
+.heroTitle {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(42px,
+            4.8vw,
+            68px);
+
+    font-weight: var(--fw-bold);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+    color: var(--color-white);
+}
+
+
+.heroTitle span {
+    display: block;
+
+    color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   Matches Home Hero scale
+   ========================================================= */
+
+.heroDescription {
+    max-width: 690px;
+
+    margin: 24px auto 0;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-base);
+
+    font-weight: var(--fw-regular);
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+   ========================================================= */
+
+.headingAccent {
+    width: 70px;
+    height: 2px;
+
+    margin: 27px auto;
+
+    background: var(--color-secondary);
+
+    transform-origin: center;
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.heroActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   BUTTON BASE
+   Matching Home Hero CTA proportions
+   ========================================================= */
+
+.heroButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    border-radius: 999px;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    font-weight: var(--fw-semibold);
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primaryButton {
+    color: var(--color-primary);
+
+    background: var(--color-secondary);
+
+    box-shadow:
+        0 10px 24px rgba(201, 164, 92, 0.16);
+}
+
+
+.primaryButton:hover {
+    box-shadow:
+        0 14px 30px rgba(201, 164, 92, 0.25);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondaryButton {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    color: rgba(255, 255, 255, 0.9);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+.secondaryButton:hover {
+    border-color: var(--color-secondary);
+
+    color: var(--color-secondary);
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   BOTTOM DECORATIVE LINE
+   ========================================================= */
+
+.bottomLine {
+    width: min(700px, 70%);
+
+    height: 1px;
+
+    margin: 75px auto 0;
+
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+
+    transform-origin: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .servicesHero {
+        /* min-height: 600px; */
+
+        padding: 135px 0 100px;
+    }
+
+    .heroTitle {
+        font-size: clamp(42px,
+                6vw,
+                58px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .servicesHero {
+        min-height: auto;
+
+        padding: 115px 0 0px;
+    }
+
+    .breadcrumb {
+        position: relative;
+
+        top: auto;
+
+        margin-bottom: 55px;
+    }
+
+    .heroTitle {
+        font-size: clamp(36px,
+                9vw,
+                48px);
+
+        line-height: 1.05;
+    }
+
+    .heroDescription {
+        max-width: 600px;
+
+        margin-top: 22px;
+
+        font-size: var(--fs-sm);
+
+        line-height: 1.7;
+    }
+
+    .bottomLine {
+        margin-top: 60px;
+    }
+
+    .decorativeDotsLeft {
+        left: -10px;
+    }
+
+    .decorativeDotsRight {
+        right: -10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .servicesHero {
+        padding: 110px 0 0px;
+    }
+
+    .breadcrumb {
+        margin-bottom: 45px;
+
+        font-size: 13px;
+    }
+
+    .sectionLabel {
+        gap: 9px;
+
+        margin-bottom: 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.18em;
+    }
+
+    .labelLine {
+        width: 28px;
+    }
+
+    .heroTitle {
+        font-size: clamp(32px,
+                10vw,
+                42px);
+
+        letter-spacing: -0.035em;
+    }
+
+    .heroDescription {
+        margin-top: 18px;
+
+        font-size: 13px;
+    }
+
+    .headingAccent {
+        width: 60px;
+
+        margin: 24px auto;
+    }
+
+    .heroActions {
+        flex-direction: column;
+
+        gap: 11px;
+
+        width: 100%;
+    }
+
+    .heroButton {
+        width: 100%;
+
+        max-width: 280px;
+
+        min-height: 48px;
+    }
+
+    .bottomLine {
+        width: 80%;
+
+        margin-top: 52px;
+    }
+
+    .decorativeDotsLeft,
+    .decorativeDotsRight {
+        opacity: 0.18;
+    }
+
+}
