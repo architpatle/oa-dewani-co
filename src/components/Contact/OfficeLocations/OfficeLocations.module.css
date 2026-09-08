@@ -1,0 +1,787 @@
+/* =========================================================
+   OFFICE LOCATIONS SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.officeLocations {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 130px;
+  background: var(--color-bg);
+}
+
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.sectionHeader {
+  margin-bottom: 58px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.22em;
+
+  color: var(--color-primary);
+}
+
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.heading {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(42px, 4.1vw, 64px);
+  font-weight: var(--fw-bold);
+
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+
+  color: var(--color-primary);
+}
+
+
+.heading span {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.officeLayout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(420px, 0.95fr);
+
+  align-items: stretch;
+
+  gap: clamp(50px, 7vw, 110px);
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.mapWrapper {
+  position: relative;
+
+  min-height: 530px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(11, 35, 65, 0.1);
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.45);
+
+  box-shadow:
+    0 16px 45px rgba(11, 35, 65, 0.04);
+}
+
+
+.mapFrameWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 530px;
+}
+
+
+.mapFrame {
+  display: block;
+
+  width: 100%;
+  height: 530px;
+
+  border: none;
+
+  filter:
+    saturate(0.78)
+    contrast(0.96);
+}
+
+
+/* =========================================================
+   MAP PLACEHOLDER
+   ========================================================= */
+
+.mapPlaceholder {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 530px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11, 35, 65, 0.04),
+      rgba(201, 164, 92, 0.08)
+    );
+}
+
+
+.mapPlaceholderIcon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  color: var(--color-secondary);
+
+  background:
+    rgba(201, 164, 92, 0.12);
+}
+
+
+.mapPlaceholder strong {
+  margin-bottom: 6px;
+
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+}
+
+
+.mapPlaceholder span {
+  margin-bottom: 20px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+
+.mapPlaceholder p {
+  max-width: 280px;
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   MAP LABEL
+   ========================================================= */
+
+.mapLabel {
+  position: absolute;
+
+  left: 24px;
+  bottom: 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 16px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.55);
+
+  border-radius: 10px;
+
+  backdrop-filter: blur(12px);
+
+  color: var(--color-primary);
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  box-shadow:
+    0 8px 25px rgba(11, 35, 65, 0.08);
+}
+
+
+.mapLabel svg {
+  color: var(--color-secondary);
+}
+
+
+.mapLabel span {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+
+/* =========================================================
+   ACCORDION
+   ========================================================= */
+
+.officeAccordion {
+  align-self: center;
+
+  border-top:
+    1px solid rgba(11, 35, 65, 0.12);
+}
+
+
+.officeItem {
+  position: relative;
+
+  border-bottom:
+    1px solid rgba(11, 35, 65, 0.12);
+}
+
+
+/* =========================================================
+   ACCORDION TRIGGER
+   ========================================================= */
+
+.officeTrigger {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 30px 0;
+
+  border: none;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  background: transparent;
+}
+
+
+.officeTitleGroup {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+
+.officeNumber {
+  padding-top: 6px;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.14em;
+
+  color: var(--color-secondary);
+}
+
+
+.officeTitleGroup h3 {
+  margin: 0 0 6px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(25px, 2vw, 32px);
+  font-weight: var(--fw-semibold);
+
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+
+  color: var(--color-primary);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.officeTitleGroup > div > span {
+  display: block;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ACCORDION ICON
+   ========================================================= */
+
+.triggerIcon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background:
+    rgba(11, 35, 65, 0.04);
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.activeOffice .triggerIcon {
+  transform: rotate(180deg);
+
+  color: var(--color-primary);
+
+  background:
+    rgba(201, 164, 92, 0.16);
+}
+
+
+/* =========================================================
+   ACTIVE STATE
+   ========================================================= */
+
+.activeOffice .officeTitleGroup h3 {
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   ACCORDION CONTENT
+   ========================================================= */
+
+.officeContent {
+  overflow: hidden;
+}
+
+
+.officeContentInner {
+  padding:
+    0 0 32px
+    51px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.officeDescription {
+  max-width: 520px;
+
+  margin:
+    0 0 24px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+
+  line-height: 1.7;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   OFFICE DETAILS
+   ========================================================= */
+
+.officeDetails {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+.detailItem {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+
+  line-height: 1.55;
+
+  color: var(--color-text-muted);
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+a.detailItem:hover {
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   DETAIL ICON
+   ========================================================= */
+
+.detailIcon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+
+  flex-shrink: 0;
+
+  color: var(--color-secondary);
+}
+
+
+.detailIcon svg {
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .officeLayout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(380px, 0.9fr);
+
+    gap: 55px;
+  }
+
+
+  .mapWrapper,
+  .mapFrameWrapper {
+    min-height: 490px;
+  }
+
+
+  .mapFrame {
+    height: 490px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .officeLocations {
+    padding: 100px 0 110px;
+  }
+
+
+  .sectionHeader {
+    margin-bottom: 50px;
+  }
+
+
+  .officeLayout {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .mapWrapper {
+    min-height: 460px;
+  }
+
+
+  .mapFrameWrapper {
+    min-height: 460px;
+  }
+
+
+  .mapFrame {
+    height: 460px;
+  }
+
+
+  .officeAccordion {
+    max-width: 760px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .officeLocations {
+    padding: 85px 0 90px;
+  }
+
+
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+
+
+  .sectionLabel {
+    margin-bottom: 20px;
+  }
+
+
+  .heading {
+    font-size: clamp(36px, 9vw, 48px);
+
+    line-height: 1.04;
+  }
+
+
+  .officeLayout {
+    gap: 36px;
+  }
+
+
+  .mapWrapper {
+    min-height: 380px;
+
+    border-radius: 18px;
+  }
+
+
+  .mapFrameWrapper {
+    min-height: 380px;
+  }
+
+
+  .mapFrame {
+    height: 380px;
+  }
+
+
+  .mapPlaceholder {
+    min-height: 380px;
+  }
+
+
+  .mapLabel {
+    left: 16px;
+    bottom: 16px;
+
+    padding: 10px 13px;
+  }
+
+
+  .officeTrigger {
+    padding: 24px 0;
+  }
+
+
+  .officeTitleGroup {
+    gap: 15px;
+  }
+
+
+  .officeTitleGroup h3 {
+    font-size: 25px;
+  }
+
+
+  .officeContentInner {
+    padding:
+      0 0 28px
+      0;
+  }
+
+
+  .officeDescription {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .officeLocations {
+    padding: 70px 0 80px;
+  }
+
+
+  .sectionLabel {
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .labelLine {
+    width: 30px;
+  }
+
+
+  .heading {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+
+
+  .mapWrapper {
+    min-height: 330px;
+
+    border-radius: 16px;
+  }
+
+
+  .mapFrameWrapper {
+    min-height: 330px;
+  }
+
+
+  .mapFrame {
+    height: 330px;
+  }
+
+
+  .mapPlaceholder {
+    min-height: 330px;
+
+    padding: 30px 20px;
+  }
+
+
+  .mapPlaceholder strong {
+    font-size: 24px;
+  }
+
+
+  .mapLabel {
+    max-width: calc(100% - 32px);
+  }
+
+
+  .mapLabel span {
+    font-size: 12px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .officeTrigger {
+    padding: 22px 0;
+  }
+
+
+  .officeNumber {
+    display: none;
+  }
+
+
+  .officeTitleGroup {
+    gap: 0;
+  }
+
+
+  .officeTitleGroup h3 {
+    font-size: 23px;
+  }
+
+
+  .triggerIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .officeDescription {
+    margin-bottom: 20px;
+
+    font-size: var(--fs-sm);
+  }
+
+
+  .detailItem {
+    gap: 10px;
+
+    font-size: 13px;
+  }
+
+}
