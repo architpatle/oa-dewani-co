@@ -1,0 +1,686 @@
+/* =========================================================
+   STATS SECTION
+   O A Dewani & Co.
+   ========================================================= */
+
+.statsSection {
+  position: relative;
+  overflow: hidden;
+
+  padding: 105px 0 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary),
+      #172a47
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.backgroundGrid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.045;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.35) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.35) 1px,
+      transparent 1px
+    );
+
+  background-size: 62px 62px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.backgroundGlow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  top: -350px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 164, 92, 0.1),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION INTRO
+   ========================================================= */
+
+.sectionIntro {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 72px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.sectionLabel {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  letter-spacing: 0.22em;
+
+  color:
+    rgba(255, 255, 255, 0.68);
+}
+
+
+.labelLine {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+   ========================================================= */
+
+.sectionIntro p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-regular);
+
+  line-height: 1.7;
+
+  text-align: right;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================================
+   STATS WRAPPER
+   ========================================================= */
+
+.statsWrapper {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   CONNECTING RAIL
+   ========================================================= */
+
+.statsRail {
+  position: absolute;
+
+  top: 18px;
+
+  left: 12.5%;
+  right: 12.5%;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  pointer-events: none;
+}
+
+
+.railProgress {
+  position: absolute;
+
+  inset: 0;
+
+  transform-origin: left;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(201, 164, 92, 0.8),
+      transparent
+    );
+
+  animation:
+    railGlow 4s ease-in-out infinite;
+}
+
+
+@keyframes railGlow {
+
+  0% {
+    transform: scaleX(0.15);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   STAT ITEM
+   ========================================================= */
+
+.statItem {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  min-height: 220px;
+
+  padding: 38px 25px 30px;
+
+  text-align: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.statItem:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(201, 164, 92, 0.3);
+
+  background:
+    rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   TIMELINE NODE
+   ========================================================= */
+
+.statNode {
+  position: absolute;
+
+  top: -7px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  border:
+    2px solid var(--color-secondary);
+}
+
+
+.statNode > span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--color-secondary);
+}
+
+
+.nodeGlow {
+  position: absolute;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(201, 164, 92, 0.2);
+
+  animation:
+    nodePulse 2.5s ease-out infinite;
+}
+
+
+@keyframes nodePulse {
+
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.iconWrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+
+  color: var(--color-secondary);
+
+  background:
+    rgba(201, 164, 92, 0.1);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.statItem:hover .iconWrapper {
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(201, 164, 92, 0.16);
+}
+
+
+/* =========================================================
+   STAT VALUE
+   ========================================================= */
+
+.statValue {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: var(--font-heading);
+
+  font-size:
+    clamp(48px, 4vw, 64px);
+
+  font-weight: var(--fw-semibold);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   STAT LABEL
+   ========================================================= */
+
+.statLabel {
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-medium);
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================================
+   BOTTOM ACCENT
+   ========================================================= */
+
+.bottomAccent {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--color-secondary);
+
+  transition:
+    width 0.4s ease;
+}
+
+
+.statItem:hover .bottomAccent {
+  width: 45px;
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+   ========================================================= */
+
+.bottomText {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 65px;
+}
+
+
+.bottomText span {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background:
+    rgba(201, 164, 92, 0.55);
+}
+
+
+.bottomText p {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: var(--fs-sm);
+
+  letter-spacing: 0.04em;
+
+  color:
+    rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .statsWrapper {
+    gap: 15px;
+  }
+
+
+  .statItem {
+    padding:
+      36px 20px 28px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+  .statsSection {
+    padding: 90px 0;
+  }
+
+
+  .sectionIntro {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 55px;
+  }
+
+
+  .sectionIntro p {
+    text-align: left;
+  }
+
+
+  .statsWrapper {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .statsRail {
+    display: none;
+  }
+
+
+  .statItem {
+    min-height: 210px;
+  }
+
+
+  .statNode {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .statsSection {
+    padding: 80px 0;
+  }
+
+
+  .sectionIntro {
+    margin-bottom: 42px;
+  }
+
+
+  .sectionLabel {
+    gap: 10px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .labelLine {
+    width: 30px;
+  }
+
+
+  .sectionIntro p {
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+  }
+
+
+  .statsWrapper {
+    gap: 14px;
+  }
+
+
+  .statItem {
+    min-height: 185px;
+
+    padding:
+      30px 16px 24px;
+
+    border-radius: 16px;
+  }
+
+
+  .iconWrapper {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 16px;
+  }
+
+
+  .statValue {
+    font-size:
+      clamp(42px, 11vw, 54px);
+  }
+
+
+  .statLabel {
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .bottomText {
+    gap: 12px;
+
+    margin-top: 45px;
+  }
+
+
+  .bottomText span {
+    width: 22px;
+  }
+
+
+  .bottomText p {
+    font-size: 11px;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .statsWrapper {
+    grid-template-columns: 1fr;
+  }
+
+
+  .statItem {
+    min-height: 175px;
+  }
+
+}
