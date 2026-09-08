@@ -9,245 +9,342 @@ import {
     BriefcaseBusiness,
 } from "lucide-react";
 
-
-export const servicesData = [
+const servicesData = [
     {
-        id: 1,
+        number: "01",
+
         slug: "audit-assurance",
 
         title: "Audit & Assurance",
 
+        icon: ShieldCheck,
+
         shortDescription:
-            "Independent audit and assurance services that strengthen financial reporting, improve transparency, and build stakeholder confidence.",
+            "Independent audit and assurance services that deliver greater transparency, stronger financial confidence, and meaningful business insight.",
 
         heroDescription:
-            "Independent assurance and audit services designed to strengthen financial confidence, improve transparency, and support better business decisions.",
+            "Go beyond financial statements with audit and assurance services designed to strengthen transparency, support informed decisions, and build stakeholder confidence.",
 
-        overview:
-            "Our Audit & Assurance services help businesses strengthen the reliability of their financial information and meet their regulatory responsibilities with confidence. Through a structured and independent approach, we evaluate financial records, reporting processes, and internal controls to provide meaningful assurance to stakeholders.",
+        overview: [
+            "OAD Audit and Assurance services go beyond financial statements, providing valuable insights and transparency to help organisations make important decisions and gain the confidence of stakeholders.",
 
-        whatWeCover: [
-            "Statutory audits",
-            "Internal audits",
-            "Tax audits",
-            "Financial statement reviews",
-            "Internal control evaluation",
-            "Risk assessment and compliance reviews",
-            "Audit support and reporting",
-            "Assurance services for stakeholders",
+            "Investors and management teams increasingly require timely information beyond traditional audited financial statements. As the time between business events and decision-making continues to shrink, organisations need real-time assistance to promote investor confidence, manage regulatory responsibilities, and support long-term, sustainable economic growth.",
         ],
 
-        icon: ShieldCheck,
+        coverage: [
+            "Statutory Audit",
+            "Internal Audit",
+            "IT Audit",
+            "Concurrent Audit",
+            "Tax Audit",
+            "Transfer Pricing Audit",
+            "GST Audit",
+            "SSAE18 Audit",
+            "Certification",
+            "Forensic Audit",
+            "Fraud Investigations",
+            "Due Diligence",
+            "Mystery Audits",
+            "Stock Audits",
+            "Unit Audits / Inspections",
+            "Comfort Letters / IPO Certifications",
+        ],
     },
 
 
     {
-        id: 2,
+        number: "02",
+
         slug: "secretarial-services",
 
         title: "Secretarial Services",
 
+        icon: FileCheck2,
+
         shortDescription:
-            "Reliable compliance and secretarial support to help businesses meet statutory requirements and maintain proper corporate governance.",
+            "Professional secretarial and compliance support that helps companies and LLPs meet statutory requirements with confidence.",
 
         heroDescription:
-            "Reliable corporate compliance and secretarial support that helps your business stay organised, compliant, and governance-ready.",
+            "Comprehensive secretarial services and professional guidance to help businesses manage statutory obligations, corporate governance, and regulatory compliance.",
 
-        overview:
-            "Our Secretarial Services are designed to help businesses manage their corporate compliance responsibilities efficiently. We provide structured support for statutory filings, corporate records, governance requirements, and regulatory obligations so businesses can remain focused on their operations.",
+        overview: [
+            "Our secretarial services are available for private companies, public limited companies, overseas companies, and Limited Liability Partnerships (LLPs).",
 
-        whatWeCover: [
-            "Company incorporation support",
-            "Statutory compliance management",
-            "Annual and periodic filings",
-            "Maintenance of statutory records",
-            "Corporate governance support",
-            "Board and shareholder documentation",
-            "Regulatory compliance assistance",
-            "Secretarial advisory services",
+            "OAD experts assist businesses with matters relating to monitoring and ensuring compliance with legal requirements while providing consultancy and support across secretarial matters governed by the Companies Act and LLP Act.",
         ],
 
-        icon: FileCheck2,
+        coverage: [
+            "Appointment or Resignation of Director or Partner",
+            "Change in Registered Address",
+            "Closure of Company or LLP",
+            "Change in Shareholding Pattern",
+            "Establishing Branch Office, Liaison Office, Project Office or Similar Outlets in India by a Foreign Entity",
+            "Drafting of Memorandum and Articles of Association of Companies",
+            "Preparation and Filing of Statutory Forms with MCA",
+            "Maintenance of Minutes Book and Statutory Registers",
+            "Annual Filing and Compliance Services for Companies and LLPs",
+            "XBRL Annual Filing",
+            "Secretarial Compliance Certificate",
+            "Report of Secretarial Audit",
+            "Assistance with the Issuance of Non-Convertible Debentures",
+            "Advising and Drafting of Joint Venture Agreements",
+            "Technical and Foreign Agreements",
+            "Shareholders' and Promoters' Agreements",
+        ],
     },
 
 
     {
-        id: 3,
+        number: "03",
+
         slug: "advisory",
 
         title: "Advisory",
 
+        icon: Lightbulb,
+
         shortDescription:
-            "Practical financial and business advisory to help you make informed decisions, manage risks, and pursue sustainable growth.",
+            "Strategic financial and business advisory that helps organisations manage risk, navigate change, and pursue sustainable growth.",
 
         heroDescription:
-            "Practical financial and business advisory that helps you make clearer decisions, manage uncertainty, and plan for sustainable growth.",
+            "Practical, insight-driven advisory solutions designed to help businesses manage uncertainty, strengthen operations, and confidently pursue transformation and growth.",
 
-        overview:
-            "Our Advisory services combine financial expertise with practical business understanding. We work closely with businesses to identify challenges, evaluate opportunities, manage risks, and develop strategies that support stronger decision-making and long-term growth.",
+        overview: [
+            "Businesses are exposed to multiple challenges and aggressive competition on a day-to-day basis, making sustainability and growth an ongoing challenge. OAD senior management has executed large and complex projects across various industries, supported by a dynamic team of professionals who help businesses identify risks and deal with uncertainty.",
 
-        whatWeCover: [
-            "Business and financial advisory",
-            "Strategic planning support",
-            "Financial performance analysis",
-            "Risk management advisory",
-            "Business restructuring support",
-            "Management decision support",
-            "Growth and expansion planning",
-            "Operational improvement advisory",
+            "OAD integrates its capabilities across offices to create customised solutions that enable businesses to undertake transformations, reorganisations, and growth and expansion plans while strengthening compliance and control processes in today's dynamic digital business environment.",
         ],
 
-        icon: Lightbulb,
+        coverage: [
+            "Internal Financial Control",
+            "Business Structuring and Opinion",
+            "Process Review",
+            "Standard Operating Procedures Design and Implementation",
+            "Cost Management Reviews",
+            "Regulatory Reviews",
+            "Business Valuations",
+            "Start-Up Advisory",
+            "Accounting Manuals",
+            "Investment Management",
+            "Board Formations and Appraisals",
+            "Corporate Governance Implementation",
+            "Enterprise Risk Management",
+            "Project and CapEx Reviews",
+            "Risk Management Manuals",
+        ],
     },
 
 
     {
-        id: 4,
+        number: "04",
+
         slug: "taxation",
 
         title: "Taxation",
 
+        icon: ReceiptText,
+
         shortDescription:
-            "Strategic tax planning, compliance, and advisory solutions that help you stay compliant while optimizing your tax position.",
+            "Strategic tax planning, compliance, and advisory services designed to help businesses manage changing tax requirements effectively.",
 
         heroDescription:
-            "Strategic tax planning and compliance support designed to help you meet obligations while managing your tax position efficiently.",
+            "Navigate India's evolving taxation landscape with proactive tax strategies, comprehensive compliance support, and effective tax-cost management.",
 
-        overview:
-            "Taxation requires a careful balance between compliance, planning, and business strategy. Our Taxation services help individuals and businesses navigate complex tax requirements, manage filings, plan effectively, and stay aligned with changing regulations.",
+        overview: [
+            "With complex and frequent changes in taxation laws and procedures in India, our taxation team specialises in proactively identifying tax strategies and implementing effective tax-cost management systems.",
 
-        whatWeCover: [
-            "Direct tax advisory",
-            "Indirect tax advisory",
-            "Income tax return filing",
-            "GST compliance and advisory",
-            "Tax planning",
-            "Tax assessments and representation",
-            "Tax audit support",
-            "Ongoing taxation compliance",
+            "The OAD taxation team is capable of managing an entire spectrum of routine, complex, and emerging compliance requirements, covering GST, direct taxation, international taxation, and other specialised tax needs.",
         ],
 
-        icon: ReceiptText,
+        coverage: [
+            "Direct Tax Compliance",
+            "Indirect Tax Compliance",
+            "International Tax Compliance",
+            "FEMA Compliance",
+            "Dispute Resolution",
+            "Income Tax PAN Number",
+            "Income Tax TDS Number",
+            "GST Registration",
+            "Income Tax Planning",
+            "Income Tax Return Filing",
+            "TDS Return Filing",
+            "GST Monthly / Quarterly Return Filing",
+            "GST Annual Return Filing",
+            "Transfer Pricing Documentation",
+            "Income Tax Representation Services such as Scrutiny Assessment / Appeal Proceedings",
+            "Lower TDS Certificate from the Income Tax Department",
+            "Certification for Foreign Remittance in Form 15CA and Form 15CB",
+            "Income Tax Exemption Registration for Trust under Section 12A and 80G",
+        ],
     },
 
 
     {
-        id: 5,
+        number: "05",
+
         slug: "ngo-services",
 
         title: "NGO Services",
 
+        icon: HeartHandshake,
+
         shortDescription:
-            "Specialized accounting, audit, taxation, and compliance support tailored to the requirements of NGOs and charitable organizations.",
+            "Specialised registration, compliance, audit, taxation, and financial support for NGOs and charitable organisations.",
 
         heroDescription:
-            "Specialised financial, compliance, and advisory support designed around the unique requirements of NGOs and charitable organisations.",
+            "End-to-end professional support for NGOs, trusts, societies, and Section 8 companies across registration, compliance, taxation, audit, and governance.",
 
-        overview:
-            "NGOs and charitable organisations operate within a distinct regulatory and financial environment. Our specialised services provide structured support across accounting, audit, taxation, reporting, and compliance to help organisations maintain transparency and focus on their mission.",
+        overview: [
+            "Non-governmental organisations (NGOs) are legally constituted organisations created by natural or legal persons that operate independently from government structures.",
 
-        whatWeCover: [
-            "Accounting and bookkeeping support",
-            "Audit and assurance services",
-            "Taxation and tax compliance",
-            "Regulatory compliance support",
-            "Financial reporting",
-            "Trust and society compliance",
-            "Documentation and record management",
-            "Advisory for financial governance",
+            "OAD NGO Services assists clients with the registration of societies, trusts, and Section 8 companies. We guide organisations through procedural formalities, documentation requirements, and registration processes while helping them understand the benchmarks required for registration.",
+
+            "Our professional team helps organisations meet the necessary criteria to obtain and avail tax exemptions for their charitable causes. We provide comprehensive NGO-related services, including incorporation, compliance with applicable laws, audits, taxation, and routine regulatory requirements.",
         ],
 
-        icon: HeartHandshake,
+        coverage: [
+            "Designing and Implementation of Accounting Methodology, Policies and Procedures",
+            "Guiding NGOs in Planning and Budgeting Developmental Activity Proposals",
+            "Monitoring and Audit of NGO Financial Records",
+            "Project Evaluation with Subject Matter Experts, Including Financial Evaluation",
+            "Cost Analysis of Socio-Economic Projects Based on Financial Data",
+            "Trust Registration / Charitable Trust Registration",
+            "Registration under Section 8 for Non-Profit Companies",
+            "Co-Operative Society Registration",
+            "Compliance under the Societies Act and Indian Trust Act",
+            "Registration under Sections 12A and 80G of the Income Tax Act",
+            "Registration under Section 35AC of the Income Tax Act",
+            "Registration at NGO Darpan",
+            "PAN / TAN Registration",
+            "Annual Income Tax Return Submission",
+            "Submission of Audit Report under Income Tax",
+            "Annual Report Submission to Registrar of Societies",
+            "FCRA Registration and Renewal",
+            "FCRA Reports and Returns",
+        ],
     },
 
 
     {
-        id: 6,
+        number: "06",
+
         slug: "nri-services",
 
         title: "NRI Services",
 
+        icon: Globe2,
+
         shortDescription:
-            "End-to-end tax and financial assistance for NRIs covering compliance, investments, taxation, and India-related financial requirements.",
+            "Convenient and comprehensive taxation and financial compliance services designed specifically for Non-Resident Indians.",
 
         heroDescription:
-            "End-to-end financial and taxation support for NRIs managing investments, compliance, and financial responsibilities in India.",
+            "Manage your Indian taxation and financial compliance remotely with comprehensive professional support designed around the needs of NRIs.",
 
-        overview:
-            "Managing financial responsibilities across countries can be complex. Our NRI Services provide structured support for taxation, investments, compliance, and India-related financial matters, helping non-resident clients manage their obligations with greater clarity.",
+        overview: [
+            "OAD's NRI experts understand that managing tax compliance while living abroad can be challenging. We have therefore implemented comprehensive NRI taxation and compliance services that enable clients to manage their Indian tax requirements conveniently through our digital platform.",
 
-        whatWeCover: [
-            "NRI income tax services",
-            "Tax return filing",
-            "India-related tax advisory",
-            "Investment-related financial support",
-            "Property taxation assistance",
-            "Compliance support",
-            "Repatriation-related guidance",
-            "Ongoing financial advisory",
+            "Clients can simply share relevant details through email while our team ensures that their compliance requirements are completed on time. Consultations and discussions can also take place through Google Meet, video calls, and conference calls.",
         ],
 
-        icon: Globe2,
+        coverage: [
+            "NRI Income Tax Return Filing",
+            "Immovable Property Sale Compliance",
+            "TDS Compliance",
+            "Financial Advisory",
+            "Assistance in Online Response to Tax Notices",
+            "15CA / 15CB Assistance for Repatriation of Funds",
+            "Determining Residential Status",
+            "Compliance with Various Laws such as Income Tax and FEMA",
+            "Business Start-Up Consultancy in India",
+            "DTAA Consultancy",
+            "Capital Gain Consultation",
+            "TDS Exemption Certificate",
+        ],
     },
 
 
     {
-        id: 7,
+        number: "07",
+
         slug: "business-start-up",
 
         title: "Business Start Up",
 
+        icon: Rocket,
+
         shortDescription:
-            "From choosing the right structure to registrations and financial setup, we help turn your business idea into a strong foundation for growth.",
+            "End-to-end startup consulting that helps entrepreneurs build the right financial, legal, and compliance foundation from day one.",
 
         heroDescription:
-            "From business structure and registrations to financial setup, we help transform your idea into a strong foundation for growth.",
+            "Turn your business idea into a stronger foundation with strategic startup consulting, registrations, financial guidance, and ongoing professional support.",
 
-        overview:
-            "Starting a business involves important decisions from the very beginning. Our Business Start Up services provide guidance across entity selection, registrations, compliance, and financial setup so entrepreneurs can begin their journey with a stronger and more structured foundation.",
+        overview: [
+            "The global economy continues to shift towards developing nations, and as one of the fastest-growing economies in the world, India offers significant opportunities for businesses looking to establish or expand their operations. However, choosing the right kind of presence can make a critical difference.",
 
-        whatWeCover: [
-            "Business structure selection",
-            "Company and entity registration",
-            "Tax registrations",
-            "GST registration support",
-            "Initial compliance setup",
-            "Financial and accounting setup",
-            "Business planning support",
-            "Startup advisory",
+            "Starting a new business is both exciting and challenging. As India's competitive landscape continues to grow, entrepreneurs often discover critical financial and legal implications only after they are ready to launch.",
+
+            "OAD provides dependable startup consulting services to ensure that important details do not slip through the cracks while entrepreneurs focus on developing their business plans.",
+
+            "With a long history of supporting entrepreneurs, OAD brings sector and financial insights to businesses while taking administrative and financial complexities off their hands. We provide the convenience of having your CA, CS, and financial advisor in one place.",
         ],
 
-        icon: Rocket,
+        coverage: [
+            "Market Study and Strategic Analysis",
+            "Structuring an Entity",
+            "Business Plan Building",
+            "Funding Options and Opportunities",
+            "Sole Proprietorship Firm Registration",
+            "Partnership Firm Registration",
+            "Incorporation of Limited Liability Partnership (LLP)",
+            "Formation of Private Limited Company",
+            "Incorporation of One Person Company (OPC)",
+            "PAN / TAN Registration",
+            "GST Registration",
+            "Professional Tax Registration",
+            "Shops and Establishment Registration",
+            "Import Export Code (IEC) Registration",
+            "ESI / PF Registration",
+            "Trade Mark Registration",
+            "MSME / UDYAM Registration",
+            "Business Start-Up Advisory Services",
+            "Registration with FSSAI Department",
+        ],
     },
 
 
     {
-        id: 8,
+        number: "08",
+
         slug: "outsourcing",
 
         title: "Outsourcing",
 
+        icon: BriefcaseBusiness,
+
         shortDescription:
-            "Dependable outsourced accounting and finance support that reduces operational burden and lets you focus on running your business.",
+            "Flexible outsourced accounting and business support that helps organisations manage operations efficiently and focus on bigger priorities.",
 
         heroDescription:
-            "Reliable outsourced accounting and finance support that reduces operational complexity and gives your business more room to focus on growth.",
+            "Offload complex operational responsibilities to an experienced professional team and focus your time and energy on building bigger ideas.",
 
-        overview:
-            "Our Outsourcing services provide businesses with dependable financial and accounting support without the burden of managing every function internally. We help streamline routine financial operations while maintaining accuracy, consistency, and timely reporting.",
+        overview: [
+            "When you do not have to focus on smaller operational details, you can create bigger ideas. OAD outsourcing services provide an experienced team along with a range of tools and methodologies to help businesses manage important functions more effectively.",
 
-        whatWeCover: [
-            "Outsourced accounting",
-            "Bookkeeping services",
-            "Payroll support",
-            "Financial reporting",
-            "Accounts payable management",
-            "Accounts receivable management",
-            "MIS and management reporting",
-            "Ongoing finance operations support",
+            "OAD can establish shared service centres across geographies and functions, an approach widely recognised for improving operational efficiency. Our team of domain experts helps organisations offload complex work and focus their attention on executing bigger business ideas.",
         ],
 
-        icon: BriefcaseBusiness,
+        coverage: [
+            "Bookkeeping",
+            "Compliance Management",
+            "End-to-End Fixed Asset Management",
+            "Physical Verification of Stock",
+            "Staff Secondment",
+            "Physical Verification of Fixed Assets",
+            "Payroll Processing",
+            "System and Accounting Manual",
+            "Regulatory Compliances",
+            "Debtor / Vendor Reconciliation",
+        ],
     },
 ];
 

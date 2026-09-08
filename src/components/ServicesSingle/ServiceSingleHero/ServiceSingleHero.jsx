@@ -44,7 +44,7 @@ const fadeUp = {
 function ServiceSingleHero({
     serviceNumber,
     title,
-    shortDescription,
+    heroDescription,
 }) {
     return (
         <section className={styles.serviceHero}>
@@ -140,7 +140,7 @@ function ServiceSingleHero({
                         className={styles.heroDescription}
                         variants={fadeUp}
                     >
-                        {shortDescription}
+                        {heroDescription}
                     </motion.p>
 
 

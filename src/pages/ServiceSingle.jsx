@@ -3,9 +3,10 @@ import { useParams, Navigate } from "react-router-dom";
 import servicesData from "../data/servicesData";
 
 import ServiceSingleHero from "../components/ServicesSingle/ServiceSingleHero/ServiceSingleHero";
+import ServiceSingleContent from "../components/ServicesSingle/ServiceSingleContent/ServiceSingleContent";
 
 
-function ServiceSinglePage() {
+function ServiceSingle() {
     const { slug } = useParams();
 
 
@@ -29,14 +30,30 @@ function ServiceSinglePage() {
 
     return (
         <>
+
+            {/* =============================================
+                SERVICE HERO
+            ============================================= */}
+
             <ServiceSingleHero
                 serviceNumber={service.number}
                 title={service.title}
-                shortDescription={service.shortDescription}
+                heroDescription={service.heroDescription}
             />
+
+
+            {/* =============================================
+                SERVICE CONTENT
+            ============================================= */}
+
+            <ServiceSingleContent
+                service={service}
+                services={servicesData}
+            />
+
         </>
     );
 }
 
 
-export default ServiceSinglePage;
+export default ServiceSingle;
