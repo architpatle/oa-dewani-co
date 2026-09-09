@@ -1,74 +1,51 @@
-import gstReturnFiling from "../assets/images/home/gstReturnFiling.jpg";
-import taxPlanning from "../assets/images/home/taxPlanning.jpg";
-import statutoryAudit from "../assets/images/home/statutoryAudit.jpg";
-
+import gstCompliance from '../assets/images/home/gstReturnFiling.jpg'
+import internalAudits from '../assets/images/home/statutoryAudit.jpg'
 
 const blogsData = [
     {
         id: 1,
 
-        slug: "key-changes-in-gst-return-filing-for-2026",
+        slug: "understanding-gst-compliance",
 
-        category: "GST",
+        category: "GST & COMPLIANCE",
 
-        date: "18 July 2026",
+        title:
+            "Understanding GST Compliance: What Businesses Need to Know",
 
-        readTime: "6 min read",
+        author: "O. A. Dewani & Co.",
 
-        title: "Key Changes in GST Return Filing for 2026",
+        date: "May 15, 2026",
 
-        description:
-            "The GST framework is evolving again in 2026. Here is a plain-language look at the new return filing requirements, deadlines, and how they affect your business.",
+        readTime: "5 min read",
 
-        author: "CA O A Dewani",
+        image: gstCompliance,
 
-        image: gstReturnFiling,
+        excerpt:
+            "A practical overview of GST compliance requirements and the key responsibilities businesses should stay on top of.",
     },
 
 
     {
         id: 2,
 
-        slug: "practical-tax-planning-guide-for-indian-startups",
+        slug: "importance-of-internal-audit",
 
-        category: "Tax Planning",
+        category: "AUDIT & ASSURANCE",
 
-        date: "30 June 2026",
+        title:
+            "Why Internal Audits Are Essential for Growing Businesses",
 
-        readTime: "8 min read",
+        author: "O. A. Dewani & Co.",
 
-        title: "A Practical Tax Planning Guide for Indian Startups",
+        date: "May 8, 2026",
 
-        description:
-            "Early-stage founders juggle product, hiring, and fundraising. Tax planning rarely gets attention until the consequences become difficult to ignore.",
+        readTime: "6 min read",
 
-        author: "CA O A Dewani",
+        image: internalAudits,
 
-        image: taxPlanning,
+        excerpt:
+            "Learn how an effective internal audit process can help identify risks, strengthen controls, and support sustainable growth.",
     },
-
-
-    {
-        id: 3,
-
-        slug: "statutory-audit-readiness-checklist-for-finance-teams",
-
-        category: "Audit",
-
-        date: "12 June 2026",
-
-        readTime: "7 min read",
-
-        title: "Statutory Audit Readiness: A Checklist for Finance Teams",
-
-        description:
-            "A statutory audit does not have to be stressful. With the right documentation rhythm, your finance team can stay prepared throughout the year.",
-
-        author: "CA O A Dewani",
-
-        image: statutoryAudit,
-    },
-    
 ];
 
 
