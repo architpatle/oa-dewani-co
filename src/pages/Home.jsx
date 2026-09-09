@@ -16,7 +16,7 @@ const Home = () => {
       <ServicesSection />
       <WhyTrustUs />
       <IndustriesSection />
-      <BlogsSection />
+      <BlogsSection variant="home"  />
       <TestimonialsSection />
       <ContactCTA />
     </>
