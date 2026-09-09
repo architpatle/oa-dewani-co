@@ -557,7 +557,7 @@
 @media (max-width: 1200px) {
 
   .hero {
-    padding-top: 65px;
+    padding-top: 120px;
   }
 
   .heroContent {
@@ -592,7 +592,7 @@
   .hero {
     min-height: auto;
 
-    padding: 70px 0 40px;
+    padding: 120px 0 40px;
   }
 
   .heroContent {
@@ -639,7 +639,7 @@
 @media (max-width: 768px) {
 
   .hero {
-    padding: 55px 0 30px;
+    padding: 120px 0 30px;
   }
 
   .heroContent {
@@ -706,7 +706,7 @@
 @media (max-width: 576px) {
 
   .hero {
-    padding-top: 45px;
+    padding-top: 120px;
   }
 
   .heroTitle {
