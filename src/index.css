@@ -68,8 +68,8 @@
   /* ---------- Font Weights ---------- */
   --fw-regular: 400;
   --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
+  --fw-semibold: 500;
+  --fw-bold: 500;
 
   /* ---------- Line Heights ---------- */
   --lh-tight: 1.1;
