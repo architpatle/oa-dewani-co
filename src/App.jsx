@@ -9,11 +9,13 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import ServiceSingle from "./pages/ServiceSingle";
 import BlogSingle from "./pages/BlogSingle";
+import ScrollToTop from "./components/Common/ScrollToTop";
 
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
 
         {/* Main Website Layout */}
