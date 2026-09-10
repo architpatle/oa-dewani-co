@@ -357,7 +357,7 @@ function BlogsSection({
                                 {/* Description */}
 
                                 <p className={styles.cardDescription}>
-                                    {blog.description}
+                                    {blog.excerpt}
                                 </p>
 
 

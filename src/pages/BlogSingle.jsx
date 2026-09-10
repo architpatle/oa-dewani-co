@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import blogsData from "../data/blogsData";
 
 import BlogSingleHero from "../components/BlogsSingle/BlogSingleHero/BlogSingleHero";
+import BlogSingleContent from "../components/BlogsSingle/BlogSingleContent/BlogSingleContent";
 
 
 function BlogSingle() {
@@ -40,6 +41,16 @@ function BlogSingle() {
                 author={blog.author}
                 date={blog.date}
                 readTime={blog.readTime}
+            />
+
+
+            {/* =============================================
+                BLOG CONTENT
+            ============================================= */}
+
+            <BlogSingleContent
+                blog={blog}
+                blogs={blogsData}
             />
 
         </>
