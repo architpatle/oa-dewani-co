@@ -1,0 +1,621 @@
+/* =========================================================
+   BLOG ENGAGEMENT
+   O A Dewani & Co.
+========================================================= */
+
+.blogEngagement {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 120px 0;
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+/* .backgroundGlow {
+    position: absolute;
+
+    top: -300px;
+    left: 50%;
+
+    width: 900px;
+    height: 700px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 164, 92, 0.12) 0%,
+            rgba(201, 164, 92, 0.045) 42%,
+            transparent 70%
+        );
+} */
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+/* .gridOverlay {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.035;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(11, 35, 65, 0.5) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(11, 35, 65, 0.5) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+} */
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.decorativeDotsLeft,
+.decorativeDotsRight {
+    position: absolute;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 5px);
+
+    gap: 13px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+.decorativeDotsLeft {
+    top: 120px;
+    left: 6%;
+}
+
+
+.decorativeDotsRight {
+    right: 7%;
+    bottom: 100px;
+}
+
+
+.decorativeDotsLeft span,
+.decorativeDotsRight span {
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   CONTENT WRAPPER
+========================================================= */
+
+.contentWrapper {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(380px, 0.85fr);
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.mainContent {
+    max-width: 680px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.sectionLabel {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--fw-semibold);
+
+    letter-spacing: 0.22em;
+
+    color: var(--color-primary);
+}
+
+
+.labelLine {
+    display: block;
+
+    width: 38px;
+    height: 1px;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heading {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        42px,
+        4.5vw,
+        64px
+    );
+
+    font-weight: var(--fw-bold);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+    color: var(--color-primary);
+}
+
+
+.heading span {
+    display: block;
+
+    color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+========================================================= */
+
+.headingAccent {
+    width: 72px;
+    height: 2px;
+
+    margin: 28px 0 25px;
+
+    background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+    max-width: 620px;
+
+    margin: 0;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-base);
+
+    font-weight: var(--fw-regular);
+
+    line-height: 1.75;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primaryButton {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    margin-top: 34px;
+
+    padding: 0 23px;
+
+    border: 1px solid var(--color-primary);
+
+    border-radius: var(--radius-pill);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    font-weight: var(--fw-semibold);
+
+    text-decoration: none;
+
+    color: var(--color-white);
+
+    background: var(--color-primary);
+
+    box-shadow:
+        0 8px 22px rgba(11, 35, 65, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.primaryButton:hover {
+    transform: translateY(-3px);
+
+    background: var(--color-primary-light);
+
+    box-shadow:
+        0 14px 28px rgba(11, 35, 65, 0.16);
+}
+
+
+/* =========================================================
+   INSIGHT CARDS
+========================================================= */
+
+.insightCards {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   INSIGHT CARD
+========================================================= */
+
+.insightCard {
+    display: grid;
+
+    grid-template-columns: 52px 1fr;
+
+    align-items: start;
+
+    gap: 18px;
+
+    padding: 25px 26px;
+
+    border:
+        1px solid rgba(11, 35, 65, 0.09);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    box-shadow:
+        0 8px 28px rgba(11, 35, 65, 0.04);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.insightCard:hover {
+    transform: translateX(6px);
+
+    border-color:
+        rgba(201, 164, 92, 0.35);
+
+    background:
+        var(--color-white);
+
+    box-shadow:
+        0 16px 34px rgba(11, 35, 65, 0.08);
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.cardIcon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    border:
+        1px solid rgba(201, 164, 92, 0.3);
+
+    border-radius: 14px;
+
+    color: var(--color-secondary);
+
+    background:
+        rgba(201, 164, 92, 0.08);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.cardNumber {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: var(--fw-semibold);
+
+    letter-spacing: 0.16em;
+
+    color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.insightCard h3 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-lg);
+
+    font-weight: var(--fw-semibold);
+
+    line-height: 1.2;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.insightCard p {
+    margin: 8px 0 0;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.65;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .blogEngagement {
+        padding: 100px 0;
+    }
+
+
+    .contentWrapper {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .mainContent {
+        max-width: 760px;
+    }
+
+
+    .insightCards {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    .insightCard {
+        grid-template-columns: 1fr;
+
+        padding: 23px;
+    }
+
+
+    .insightCard:hover {
+        transform: translateY(-4px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .blogEngagement {
+        padding: 85px 0 90px;
+    }
+
+
+    .heading {
+        font-size: clamp(
+            36px,
+            9vw,
+            48px
+        );
+    }
+
+
+    .description {
+        font-size: var(--fs-sm);
+    }
+
+
+    .insightCards {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+
+    .insightCard {
+        grid-template-columns: 50px 1fr;
+    }
+
+
+    .decorativeDotsLeft {
+        left: -15px;
+    }
+
+
+    .decorativeDotsRight {
+        right: -15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .blogEngagement {
+        padding: 70px 0 75px;
+    }
+
+
+    .sectionLabel {
+        font-size: 10px;
+
+        letter-spacing: 0.18em;
+    }
+
+
+    .heading {
+        font-size: clamp(
+            32px,
+            10vw,
+            42px
+        );
+
+        line-height: 1.05;
+    }
+
+
+    .headingAccent {
+        margin: 23px 0;
+    }
+
+
+    .description {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .primaryButton {
+        width: 100%;
+
+        min-height: 48px;
+
+        margin-top: 28px;
+    }
+
+
+    .insightCard {
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+
+    .cardIcon {
+        width: 46px;
+        height: 46px;
+
+        border-radius: 12px;
+    }
+
+
+    .insightCard h3 {
+        font-size: var(--fs-base);
+    }
+
+
+    .insightCard p {
+        font-size: 12px;
+    }
+
+}
